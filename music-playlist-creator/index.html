@@ -13,14 +13,34 @@
     <header>
       <h1 style="margin-left: 40px">Music Playlist Explorer</h1>
     </header>
-    
+
     <main id="playlist-cards">
       <div class="card">
-        <img width="200px" height="200px" src="https://upload.wikimedia.org/wikipedia/en/f/f3/Trench_Twenty_One_Pilots.png">
-        <h4>Playlist Title</h4>
-        <p>Creator Name</p>
+        <img
+          width="200px"
+          height="200px"
+          src="https://upload.wikimedia.org/wikipedia/en/f/f3/Trench_Twenty_One_Pilots.png"
+        />
+        <div id="cardText"
+          style="
+            flex: 1;
+            margin-left: 10px;
+            padding-top: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "
+        >
+          <div id="cardInfo">
+            <h4>Playlist Title</h4>
+            <p>Creator Name</p>
+          </div>
+          <div id="cardLikes" style="padding-bottom: 10px; display: flex; align-items: center; gap: 8px">
+            <img width="10px" height="10px" />
+            <p>Likes</p>
+          </div>
+        </div>
       </div>
-     
     </main>
 
     <footer>

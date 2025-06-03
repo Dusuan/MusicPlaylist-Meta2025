@@ -20,12 +20,14 @@ header {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   justify-self: center;
   align-self: center;
   margin-top: 20px;
   border-radius: 2%;
   width: 200px;
-  height: 250px;
+  height: 300px;
   box-shadow: 5px 5px 5px rgb(128, 128, 128);
   background-color: #ffffff;
 }
