@@ -1,11 +1,21 @@
-{
-   "TopPlaylist":{
-    "playlistID" : 1,
-    "playlist_name" : "I love TOP",
-    "playlist_author" : "Dusuan",
-    "playlist_art" : "idk",
-    "songs" : [
-        "Stressed Out", "Jumpsuit", "Holding on to you" 
-    ]
-   }
-}
+[
+  {
+    "playlistID": 1,
+    "playlist_name": "I love TOP",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
+    "imgSrc": "/Users/dusuan/CodePath/MusicPlaylist-Meta2025/music-playlist-creator/assets/img/top.webp",
+    "likeCount": 0
+  },
+  {
+    "playlistID": 2,
+    "playlist_name": "Goat",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
+    "imgSrc": "/Users/dusuan/CodePath/MusicPlaylist-Meta2025/music-playlist-creator/assets/img/top.webp",
+    "likeCount": 0
+  }
+]
+  
