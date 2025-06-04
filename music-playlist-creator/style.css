@@ -10,15 +10,56 @@ body {
 header {
   flex: 1;
   align-items: center;
-  background-color: beige;
+  color: white;
+  background-color: rgb(29, 29, 29);
 }
 
 #playlist-cards {
+  justify-content: center;
   padding: 20px;
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: repeat(auto-fill, 300px);
 }
 
+#modal {
+  display: none;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+}
+#modalContent {
+    padding: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 15%;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+#albumSection {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#albumSongs {
+  display: flex;
+  flex-direction: column;
+}
+#song {
+gap: 10px;
+  padding: 6px;
+  border-width: 1px;
+  border-radius: 10px;
+  border-style:solid;
+  border-color: grey;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -28,7 +69,7 @@ header {
   border-radius: 2%;
   width: 200px;
   height: 300px;
-  box-shadow: 5px 5px 5px rgb(128, 128, 128);
+  box-shadow: 2px 2px 2px rgb(128, 128, 128);
   background-color: #ffffff;
 }
 
@@ -42,4 +83,15 @@ h4 {
 }
 p {
   margin: 0;
+}
+
+#card:hover{
+    background-color: lightblue;
+}
+
+#close:hover{
+    background-color: lightcoral;
+}
+#close{
+    text-align: center;
 }

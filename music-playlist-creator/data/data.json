@@ -1,0 +1,11 @@
+{
+   "TopPlaylist":{
+    "playlistID" : 1,
+    "playlist_name" : "I love TOP",
+    "playlist_author" : "Dusuan",
+    "playlist_art" : "idk",
+    "songs" : [
+        "Stressed Out", "Jumpsuit", "Holding on to you" 
+    ]
+   }
+}
