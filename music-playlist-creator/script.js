@@ -2,8 +2,8 @@ const modal = document.getElementById("modal");
 const card = document.getElementById("card");
 const closeModal = document.getElementById("close");
 const cardExplorer = document.getElementById("playlist-cards");
-
-closeModal.addEventListener("click", setModalClosed);
+// card.addEventListener("click", setModalOpen)
+// closeModal.addEventListener("click", setModalClosed);
 
 function setModalClosed() {
   modal.style.display = "none";
@@ -23,9 +23,8 @@ async function getData() {
 async function displayPlaylists() {
   let Playlists = await getData();
 
-  // Issue is on this for each, wont let me add to the innerHTML without breaking
   Playlists.forEach((element) => {
-    newCard = document.createElement('div');
+    newCard = document.createElement("div");
     newCard.innerHTML = `<div id="id-${element.playlistID}" class="card">
         <img width="200px" height="200px" src=${element.imgSrc} />
         <div
@@ -54,37 +53,41 @@ async function displayPlaylists() {
             <img width="10px" height="10px" />
             <p> ${element.likeCount} Likes</p>
           </div>
-        </div>
-      </div>`;
+          </div>
+          </div>`;
+
+    newCard.onclick = () => openModal(element);
     cardExplorer.appendChild(newCard);
   });
 }
 
-function openModal() {
-  modal.innerHTML += ` <div id="modalContent">
-        <div id="albumSection">
-          <div style="display: flex">
-            <img
-              style="border-radius: 6px"
-              width="200px"
-              height="200px"
-              src="https://upload.wikimedia.org/wikipedia/en/f/f3/Trench_Twenty_One_Pilots.png"
-            />
-            <div style="margin-left: 20px">
-              <h1>Trench</h1>
-              <p>Twenty One Pilots</p>
-            </div>
-          </div>
-          <div id="close" style="width: 20px; height: 20px; padding: 10px">
+function openModal(PlaylistData) {
+  xbtn = document.createElement("div");
+  xbtn.innerHTML = `<div id="close" class="x" style="width: 20px; height: 20px; padding: 10px">
             X
+          </div>`;
+  modal.innerHTML = /*html*/ `<div id="modalContent">
+      <div id="albumSection" class="x">
+      <div style="display: flex">
+      <img
+      style="border-radius: 6px"
+      width="200px"
+      height="200px"
+      src="${PlaylistData.imgSrc}"
+      />
+      <div style="margin-left: 20px">
+      <h1>${PlaylistData.playlist_name}</h1>
+      <p>${PlaylistData.playlist_author}</p>
+      </div>
           </div>
+          
         </div>
         <div id="albumSongs">
           <div id="song">
             <img
               style="border-radius: 4px"
               width="50px"
-              src="https://upload.wikimedia.org/wikipedia/en/f/f3/Trench_Twenty_One_Pilots.png"
+              src="${PlaylistData.imgSrc}"
             />
             <div
               style="
@@ -123,6 +126,11 @@ function openModal() {
           </div>
         </div>
       </div>`;
-}
 
+  const playlistSection = modal.getElementsByClassName('x')
+  
+  xbtn.onclick = () => setModalClosed();
+  playlistSection[0].appendChild(xbtn)
+  setModalOpen();
+}
 displayPlaylists();
