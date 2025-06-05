@@ -3,7 +3,6 @@ const card = document.getElementById("card");
 const closeModal = document.getElementById("close");
 const cardExplorer = document.getElementById("playlist-cards");
 
-card.addEventListener("click", setModalOpen);
 closeModal.addEventListener("click", setModalClosed);
 
 function setModalClosed() {
@@ -14,23 +13,22 @@ function setModalOpen() {
 }
 
 async function getData() {
- let res;
-  await fetch("./data/data.json")
-    .then((response) => {
+  let res;
+  await fetch("./data/data.json").then((response) => {
     res = response.json();
-    })
-    return res;
+  });
+  return res;
 }
 
 async function displayPlaylists() {
-let Playlists = await getData()
-  
-Playlists.forEach((element) => {
-      cardExplorer.innerHTML += /*html*/ `
-      <div class="card">
+  let Playlists = await getData();
+
+  // Issue is on this for each, wont let me add to the innerHTML without breaking
+  Playlists.forEach((element) => {
+    newCard = document.createElement('div');
+    newCard.innerHTML = `<div id="id-${element.playlistID}" class="card">
         <img width="200px" height="200px" src=${element.imgSrc} />
         <div
-          id="cardText"
           style="
             flex: 1;
             margin-left: 10px;
@@ -38,14 +36,14 @@ Playlists.forEach((element) => {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-          "li
+          "
         >
-          <div id="cardInfo">
+          <div>
             <h4>${element.playlist_name}</h4>
             <p>${element.playlist_author}</p>
           </div>
           <div
-            id="cardLikes"
+            
             style="
               padding-bottom: 10px;
               display: flex;
@@ -57,25 +55,74 @@ Playlists.forEach((element) => {
             <p> ${element.likeCount} Likes</p>
           </div>
         </div>
-      </div>
-    `;
-    });
-
-
-  
-
-  console.log("I get here 3");
+      </div>`;
+    cardExplorer.appendChild(newCard);
+  });
 }
 
-function sumOfEvens(int) {
-  let sum = 0;
-  for (let i = 0; i <= number; i++) {
-    if (i % 2 === 0) {
-      sum += i;
-    }
-  }
-  return sum;
+function openModal() {
+  modal.innerHTML += ` <div id="modalContent">
+        <div id="albumSection">
+          <div style="display: flex">
+            <img
+              style="border-radius: 6px"
+              width="200px"
+              height="200px"
+              src="https://upload.wikimedia.org/wikipedia/en/f/f3/Trench_Twenty_One_Pilots.png"
+            />
+            <div style="margin-left: 20px">
+              <h1>Trench</h1>
+              <p>Twenty One Pilots</p>
+            </div>
+          </div>
+          <div id="close" style="width: 20px; height: 20px; padding: 10px">
+            X
+          </div>
+        </div>
+        <div id="albumSongs">
+          <div id="song">
+            <img
+              style="border-radius: 4px"
+              width="50px"
+              src="https://upload.wikimedia.org/wikipedia/en/f/f3/Trench_Twenty_One_Pilots.png"
+            />
+            <div
+              style="
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+              "
+            >
+              <div>
+                <p>Cut my Lip</p>
+                <p>Twenty One pilots</p>
+                <p>Trench</p>
+              </div>
+              <div>
+                <p>3:34</p>
+              </div>
+            </div>
+          </div>
+          <div id="song">
+            <img
+              width="50px"
+              src="https://upload.wikimedia.org/wikipedia/en/f/f3/Trench_Twenty_One_Pilots.png"
+            />
+            <p>Jumpsuit</p>
+            <p>2:32</p>
+          </div>
+          <div id="song">
+            <img
+              width="50px"
+              src="https://upload.wikimedia.org/wikipedia/en/f/f3/Trench_Twenty_One_Pilots.png"
+            />
+            <p>Levitate</p>
+            <p>1:50</p>
+          </div>
+        </div>
+      </div>`;
 }
-
 
 displayPlaylists();
