@@ -22,6 +22,15 @@ async function getData() {
 
 async function displayPlaylists() {
   let Playlists = await getData();
+  renderPlaylist(Playlists)
+}
+
+async function renderPlaylist(Playlists) {
+
+  const cardChildren = cardExplorer.children;
+  const cardArray = [...cardChildren];
+
+  cardArray.forEach((item) => cardExplorer.removeChild(item));
 
   Playlists.forEach((element) => {
     newCard = document.createElement("div");
@@ -42,7 +51,7 @@ async function displayPlaylists() {
             <p>${element.playlist_author}</p>
           </div>
           <div
-            
+          
             style="
               padding-bottom: 10px;
               display: flex;
@@ -50,17 +59,35 @@ async function displayPlaylists() {
               gap: 8px;
             "
           >
-            <img width="10px" height="10px" />
+            <img class="likeBtn" src="" width="10px" height="10px" />
             <p> ${element.likeCount} Likes</p>
           </div>
           </div>
           </div>`;
 
-    newCard.onclick = () => openModal(element);
+    const likeBtn = newCard.getElementsByClassName("likeBtn");
+    const image = newCard.getElementsByTagName("img")[0];
+    image.onclick = () => openModal(element);
+    likeBtn[0].addEventListener("click", () => like(Playlists, element));
     cardExplorer.appendChild(newCard);
   });
 }
 
+function like(Playlists, PlaylistData) {
+  if (PlaylistData.isLiked) {
+    PlaylistData.isLiked = false;
+    PlaylistData.likeCount -= 1;
+    console.log(PlaylistData.likeCount);
+    console.log(PlaylistData.playlistID);
+  } else {
+    PlaylistData.isLiked = true;
+    PlaylistData.likeCount += 1;
+    console.log(PlaylistData.likeCount);
+    console.log(PlaylistData.playlistID);
+ }
+  
+   renderPlaylist(Playlists)
+}
 function openModal(PlaylistData) {
   xbtn = document.createElement("div");
   xbtn.innerHTML = `<div id="close" class="x" style="width: 20px; height: 20px; padding: 10px">
@@ -127,10 +154,11 @@ function openModal(PlaylistData) {
         </div>
       </div>`;
 
-  const playlistSection = modal.getElementsByClassName('x')
-  
+  const playlistSection = modal.getElementsByClassName("x");
+
   xbtn.onclick = () => setModalClosed();
-  playlistSection[0].appendChild(xbtn)
+  playlistSection[0].appendChild(xbtn);
   setModalOpen();
 }
+
 displayPlaylists();

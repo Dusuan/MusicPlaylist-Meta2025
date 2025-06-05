@@ -91,3 +91,8 @@ p {
 #close{
     text-align: center;
 }
+
+.likeBtn{
+  padding: 4px;
+  background-color: red;
+}

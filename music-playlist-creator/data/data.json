@@ -6,7 +6,8 @@
     "playlist_art": "idk",
     "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
     "imgSrc": "./assets/img/top.png",
-    "likeCount": 0
+    "likeCount": 0,
+    "isLiked": false
   },
   {
     "playlistID": 2,
@@ -15,7 +16,29 @@
     "playlist_art": "idk",
     "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
     "imgSrc": "./assets/img/top.png",
-    "likeCount": 0
+    "likeCount": 0,
+    "isLiked": false
+  }
+  ,
+  {
+    "playlistID": 3,
+    "playlist_name": "Goat",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
+    "imgSrc": "./assets/img/top.png",
+    "likeCount": 0,
+    "isLiked": false
+  }
+  ,
+  {
+    "playlistID": 4,
+    "playlist_name": "Goat",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
+    "imgSrc": "./assets/img/top.png",
+    "likeCount": 0,
+    "isLiked": false
   }
 ]
-  
