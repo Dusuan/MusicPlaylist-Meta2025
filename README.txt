@@ -1,0 +1,1 @@
+This is a project for displaying, shuffling and making custom playlists for a user to enjoy his music library, using mainly HTML, CSS and pure JavaScript
