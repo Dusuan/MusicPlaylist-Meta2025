@@ -44,7 +44,9 @@ header {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  margin: 15%;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 10%;
   border-radius: 10px;
   background-color: #f8f8f8;
 }
