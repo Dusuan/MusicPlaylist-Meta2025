@@ -5,7 +5,7 @@
     "playlist_author": "Dusuan",
     "playlist_art": "idk",
     "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
-    "imgSrc": "/Users/dusuan/CodePath/MusicPlaylist-Meta2025/music-playlist-creator/assets/img/top.webp",
+    "imgSrc": "./assets/img/top.png",
     "likeCount": 0
   },
   {
@@ -14,7 +14,7 @@
     "playlist_author": "Dusuan",
     "playlist_art": "idk",
     "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
-    "imgSrc": "/Users/dusuan/CodePath/MusicPlaylist-Meta2025/music-playlist-creator/assets/img/top.webp",
+    "imgSrc": "./assets/img/top.png",
     "likeCount": 0
   }
 ]

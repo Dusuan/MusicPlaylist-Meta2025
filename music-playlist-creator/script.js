@@ -23,45 +23,43 @@ async function getData() {
 }
 
 async function displayPlaylists() {
-  let Playlists = await getData()
-  console.log("I get here 1");
-  console.log(Playlists[0]);
-  console.log("I get here 2");
-//   Playlists.item.forEach((element) => {
-//       cardExplorer.innerHTML += /*html*/ `
-//       <div class="card">
-//         <img width="200px" height="200px" src={element.img} />
-//         <div
-//           id="cardText"
-//           style="
-//             flex: 1;
-//             margin-left: 10px;
-//             padding-top: 6px;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: space-between;
-//           "
-//         >
-//           <div id="cardInfo">
-//             <h4>{element.playlist_name}</h4>
-//             <p>{element.playlist_author}</p>
-//           </div>
-//           <div
-//             id="cardLikes"
-//             style="
-//               padding-bottom: 10px;
-//               display: flex;
-//               align-items: center;
-//               gap: 8px;
-//             "
-//           >
-//             <img width="10px" height="10px" />
-//             <p> {element.likeCount} Likes</p>
-//           </div>
-//         </div>
-//       </div>
-//     `;
-//     });
+let Playlists = await getData()
+  
+Playlists.forEach((element) => {
+      cardExplorer.innerHTML += /*html*/ `
+      <div class="card">
+        <img width="200px" height="200px" src=${element.imgSrc} />
+        <div
+          id="cardText"
+          style="
+            flex: 1;
+            margin-left: 10px;
+            padding-top: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          "li
+        >
+          <div id="cardInfo">
+            <h4>${element.playlist_name}</h4>
+            <p>${element.playlist_author}</p>
+          </div>
+          <div
+            id="cardLikes"
+            style="
+              padding-bottom: 10px;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+            "
+          >
+            <img width="10px" height="10px" />
+            <p> ${element.likeCount} Likes</p>
+          </div>
+        </div>
+      </div>
+    `;
+    });
 
 
   
