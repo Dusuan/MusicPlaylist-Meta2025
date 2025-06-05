@@ -19,14 +19,11 @@ async function getData() {
   });
   return res;
 }
-
 async function displayPlaylists() {
   let Playlists = await getData();
-  renderPlaylist(Playlists)
+  renderPlaylist(Playlists);
 }
-
 async function renderPlaylist(Playlists) {
-
   const cardChildren = cardExplorer.children;
   const cardArray = [...cardChildren];
 
@@ -72,7 +69,6 @@ async function renderPlaylist(Playlists) {
     cardExplorer.appendChild(newCard);
   });
 }
-
 function like(Playlists, PlaylistData) {
   if (PlaylistData.isLiked) {
     PlaylistData.isLiked = false;
@@ -84,11 +80,12 @@ function like(Playlists, PlaylistData) {
     PlaylistData.likeCount += 1;
     console.log(PlaylistData.likeCount);
     console.log(PlaylistData.playlistID);
- }
-  
-   renderPlaylist(Playlists)
+  }
+
+  renderPlaylist(Playlists);
 }
 function openModal(PlaylistData) {
+  
   xbtn = document.createElement("div");
   xbtn.innerHTML = `<div id="close" class="x" style="width: 20px; height: 20px; padding: 10px">
             X
@@ -109,8 +106,147 @@ function openModal(PlaylistData) {
           </div>
           
         </div>
-        <div id="albumSongs">
-          <div id="song">
+        <div><button class="shufflBtn">Shuffle :P</button></div>
+        <div id="albumSongs" class="albumSongs">
+
+      </div>`;
+
+
+  const albumSongsPart = modal.getElementsByClassName('albumSongs')
+  console.log(albumSongsPart[0])
+  let songs = PlaylistData.songs;
+  console.log(songs)
+  songs.forEach((song) =>  {
+    let newSong = document.createElement('div')
+    newSong.innerHTML = `
+    <div id="song">
+            <img
+              style="border-radius: 4px"
+              width="50px"
+              src=""
+            />
+            <div
+              style="
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+              "
+            >
+              <div>
+                <p>${song}</p>
+                <p>Twenty One pilots</p>
+                <p>Trench</p>
+              </div>
+              <div>
+                <p>3:34</p>
+              </div>
+            </div>
+          </div>`;
+
+    albumSongsPart[0].appendChild(newSong)}
+  )
+
+  const playlistSection = modal.getElementsByClassName("x");
+  const shufflBtn = modal.getElementsByClassName("shufflBtn");
+  shufflBtn[0].addEventListener("click", () =>
+    shuffle(PlaylistData, PlaylistData.songs)
+  );
+  xbtn.onclick = () => setModalClosed();
+  playlistSection[0].appendChild(xbtn);
+  setModalOpen();
+}
+
+function renderSongs(PlaylistData) {
+  const modalChildren = modal.children;
+  const modalArray = [...modalChildren];
+
+  modalArray.forEach((item) => modal.removeChild(item));
+
+  xbtn = document.createElement("div");
+  xbtn.innerHTML = `<div id="close" class="x" style="width: 20px; height: 20px; padding: 10px">
+            X
+          </div>`;
+  modal.innerHTML = /*html*/ `<div id="modalContent">
+      <div id="albumSection" class="x">
+      <div style="display: flex">
+      <img
+      style="border-radius: 6px"
+      width="200px"
+      height="200px"
+      src="${PlaylistData.imgSrc}"
+      />
+      <div style="margin-left: 20px">
+      <h1>${PlaylistData.playlist_name}</h1>
+      <p>${PlaylistData.playlist_author}</p>
+      </div>
+          </div>
+          
+        </div>
+        <div><button class="shufflBtn">Shuffle :P</button></div>
+        <div id="albumSongs" class="albumSongs">
+
+      </div>`;
+
+
+  const albumSongsPart = modal.getElementsByClassName('albumSongs')
+  console.log(albumSongsPart[0])
+  let songs = PlaylistData.songs;
+  console.log(songs)
+  songs.forEach((song) =>  {
+    let newSong = document.createElement('div')
+    newSong.innerHTML = `
+    <div id="song">
+            <img
+              style="border-radius: 4px"
+              width="50px"
+              src=""
+            />
+            <div
+              style="
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+              "
+            >
+              <div>
+                <p>${song}</p>
+                <p>Twenty One pilots</p>
+                <p>Trench</p>
+              </div>
+              <div>
+                <p>3:34</p>
+              </div>
+            </div>
+          </div>`;
+
+    albumSongsPart[0].appendChild(newSong)}
+  )
+  
+
+  const playlistSection = modal.getElementsByClassName("x");
+  const shufflBtn = modal.getElementsByClassName("shufflBtn");
+  shufflBtn[0].addEventListener("click", () =>
+    shuffle(PlaylistData, PlaylistData.songs)
+  );
+  xbtn.onclick = () => setModalClosed();
+  playlistSection[0].appendChild(xbtn);
+  setModalOpen();
+}
+function shuffle(PlaylistData, songs) {
+  console.log(songs);
+  songs.sort(() => Math.random() - 0.5);
+  console.log(songs);
+
+  renderSongs(PlaylistData);
+}
+
+displayPlaylists();
+
+/*≈<div id="song">
             <img
               style="border-radius: 4px"
               width="50px"
@@ -134,31 +270,4 @@ function openModal(PlaylistData) {
                 <p>3:34</p>
               </div>
             </div>
-          </div>
-          <div id="song">
-            <img
-              width="50px"
-              src="https://upload.wikimedia.org/wikipedia/en/f/f3/Trench_Twenty_One_Pilots.png"
-            />
-            <p>Jumpsuit</p>
-            <p>2:32</p>
-          </div>
-          <div id="song">
-            <img
-              width="50px"
-              src="https://upload.wikimedia.org/wikipedia/en/f/f3/Trench_Twenty_One_Pilots.png"
-            />
-            <p>Levitate</p>
-            <p>1:50</p>
-          </div>
-        </div>
-      </div>`;
-
-  const playlistSection = modal.getElementsByClassName("x");
-
-  xbtn.onclick = () => setModalClosed();
-  playlistSection[0].appendChild(xbtn);
-  setModalOpen();
-}
-
-displayPlaylists();
+          </div>*/

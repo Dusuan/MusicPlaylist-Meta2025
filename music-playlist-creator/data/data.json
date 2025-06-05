@@ -4,7 +4,7 @@
     "playlist_name": "I love TOP",
     "playlist_author": "Dusuan",
     "playlist_art": "idk",
-    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
+    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you", "Ride", "Heathens", "Tear in My Heart", "Lane Boy", "Car Radio", "The Hype", "My Blood", "Chlorine", "Nico and the Niners", "Smithereens", "Neon Gravestones", "The Judge"],
     "imgSrc": "./assets/img/top.png",
     "likeCount": 0,
     "isLiked": false
@@ -14,31 +14,189 @@
     "playlist_name": "Goat",
     "playlist_author": "Dusuan",
     "playlist_art": "idk",
-    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
+    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you", "Ride", "Heathens", "Tear in My Heart", "Lane Boy", "Car Radio", "The Hype", "My Blood", "Chlorine", "Nico and the Niners", "Smithereens", "Neon Gravestones", "The Judge"],
     "imgSrc": "./assets/img/top.png",
     "likeCount": 0,
     "isLiked": false
-  }
-  ,
+  },
   {
     "playlistID": 3,
-    "playlist_name": "Goat",
+    "playlist_name": "Chill Vibes",
     "playlist_author": "Dusuan",
     "playlist_art": "idk",
-    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
-    "imgSrc": "./assets/img/top.png",
-    "likeCount": 0,
-    "isLiked": false
-  }
-  ,
+    "songs": ["Ride", "Heathens", "Tear in My Heart", "Lane Boy", "Car Radio", "The Hype", "My Blood", "Chlorine", "Nico and the Niners", "Smithereens", "Neon Gravestones", "The Judge", "Truce", "Goner", "Not Today"],
+    "imgSrc": "./assets/img/chill.png",
+    "likeCount": 5,
+    "isLiked": true
+  },
   {
     "playlistID": 4,
-    "playlist_name": "Goat",
+    "playlist_name": "Workout Mix",
     "playlist_author": "Dusuan",
     "playlist_art": "idk",
-    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you"],
-    "imgSrc": "./assets/img/top.png",
-    "likeCount": 0,
+    "songs": ["Lane Boy", "Car Radio", "The Hype", "My Blood", "Chlorine", "Nico and the Niners", "Smithereens", "Neon Gravestones", "The Judge", "Truce", "Goner", "Not Today", "Polarize", "Doubt", "We Don't Believe What's on TV"],
+    "imgSrc": "./assets/img/workout.png",
+    "likeCount": 10,
+    "isLiked": true
+  },
+  {
+    "playlistID": 5,
+    "playlist_name": "Party Hits",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["My Blood", "Chlorine", "Nico and the Niners", "Smithereens", "Neon Gravestones", "The Judge", "Truce", "Goner", "Not Today", "Polarize", "Doubt", "We Don't Believe What's on TV", "Message Man", "Hometown", "Fairly Local"],
+    "imgSrc": "./assets/img/party.png",
+    "likeCount": 8,
     "isLiked": false
+  },
+  {
+    "playlistID": 6,
+    "playlist_name": "Road Trip",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Smithereens", "Neon Gravestones", "The Judge", "Truce", "Goner", "Not Today", "Polarize", "Doubt", "We Don't Believe What's on TV", "Message Man", "Hometown", "Fairly Local", "Levitate", "Pet Cheetah", "Legend"],
+    "imgSrc": "./assets/img/roadtrip.png",
+    "likeCount": 12,
+    "isLiked": true
+  },
+  {
+    "playlistID": 7,
+    "playlist_name": "Relaxation",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Truce", "Goner", "Not Today", "Polarize", "Doubt", "We Don't Believe What's on TV", "Message Man", "Hometown", "Fairly Local", "Levitate", "Pet Cheetah", "Legend", "Bandito", "Cut My Lip", "Morph"],
+    "imgSrc": "./assets/img/relax.png",
+    "likeCount": 3,
+    "isLiked": false
+  },
+  {
+    "playlistID": 8,
+    "playlist_name": "Focus",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Polarize", "Doubt", "We Don't Believe What's on TV", "Message Man", "Hometown", "Fairly Local", "Levitate", "Pet Cheetah", "Legend", "Bandito", "Cut My Lip", "Morph", "The Run and Go", "House of Gold", "Migraine"],
+    "imgSrc": "./assets/img/focus.png",
+    "likeCount": 7,
+    "isLiked": true
+  },
+  {
+    "playlistID": 9,
+    "playlist_name": "Throwback",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Message Man", "Hometown", "Fairly Local", "Levitate", "Pet Cheetah", "Legend", "Bandito", "Cut My Lip", "Morph", "The Run and Go", "House of Gold", "Migraine", "Ode to Sleep", "Forest", "Glowing Eyes"],
+    "imgSrc": "./assets/img/throwback.png",
+    "likeCount": 6,
+    "isLiked": false
+  },
+  {
+    "playlistID": 10,
+    "playlist_name": "Indie Mix",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Levitate", "Pet Cheetah", "Legend", "Bandito", "Cut My Lip", "Morph", "The Run and Go", "House of Gold", "Migraine", "Ode to Sleep", "Forest", "Glowing Eyes", "Kitchen Sink", "Lovely", "Ruby"],
+    "imgSrc": "./assets/img/indie.png",
+    "likeCount": 9,
+    "isLiked": true
+  },
+  {
+    "playlistID": 11,
+    "playlist_name": "Pop Hits",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Bandito", "Cut My Lip", "Morph", "The Run and Go", "House of Gold", "Migraine", "Ode to Sleep", "Forest", "Glowing Eyes", "Kitchen Sink", "Lovely", "Ruby", "Anathema", "Be Concerned", "Clear"],
+    "imgSrc": "./assets/img/pop.png",
+    "likeCount": 4,
+    "isLiked": false
+  },
+  {
+    "playlistID": 12,
+    "playlist_name": "Rock Anthems",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["The Run and Go", "House of Gold", "Migraine", "Ode to Sleep", "Forest", "Glowing Eyes", "Kitchen Sink", "Lovely", "Ruby", "Anathema", "Be Concerned", "Clear", "Fake You Out", "Goner", "Trees"],
+    "imgSrc": "./assets/img/rock.png",
+    "likeCount": 11,
+    "isLiked": true
+  },
+  {
+    "playlistID": 13,
+    "playlist_name": "Jazz Classics",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Ode to Sleep", "Forest", "Glowing Eyes", "Kitchen Sink", "Lovely", "Ruby", "Anathema", "Be Concerned", "Clear", "Fake You Out", "Goner", "Trees", "Screen", "The Pantaloon", "Taxi Cab"],
+    "imgSrc": "./assets/img/jazz.png",
+    "likeCount": 2,
+    "isLiked": false
+  },
+  {
+    "playlistID": 14,
+    "playlist_name": "Hip Hop",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Kitchen Sink", "Lovely", "Ruby", "Anathema", "Be Concerned", "Clear", "Fake You Out", "Goner", "Trees", "Screen", "The Pantaloon", "Taxi Cab", "Johnny Boy", "March to the Sea", "Trapdoor"],
+    "imgSrc": "./assets/img/hiphop.png",
+    "likeCount": 13,
+    "isLiked": true
+  },
+  {
+    "playlistID": 15,
+    "playlist_name": "Classical",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Anathema", "Be Concerned", "Clear", "Fake You Out", "Goner", "Trees", "Screen", "The Pantaloon", "Taxi Cab", "Johnny Boy", "March to the Sea", "Trapdoor", "A Car, a Torch, a Death", "Before You Start Your Day", "Isle of Flightless Birds"],
+    "imgSrc": "./assets/img/classical.png",
+    "likeCount": 1,
+    "isLiked": false
+  },
+  {
+    "playlistID": 16,
+    "playlist_name": "Electronic",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Fake You Out", "Goner", "Trees", "Screen", "The Pantaloon", "Taxi Cab", "Johnny Boy", "March to the Sea", "Trapdoor", "A Car, a Torch, a Death", "Before You Start Your Day", "Isle of Flightless Birds", "Fall Away", "Friend, Please", "Oh Ms Believer"],
+    "imgSrc": "./assets/img/electronic.png",
+    "likeCount": 14,
+    "isLiked": true
+  },
+  {
+    "playlistID": 17,
+    "playlist_name": "Acoustic",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Screen", "The Pantaloon", "Taxi Cab", "Johnny Boy", "March to the Sea", "Trapdoor", "A Car, a Torch, a Death", "Before You Start Your Day", "Isle of Flightless Birds", "Fall Away", "Friend, Please", "Oh Ms Believer", "Stressed Out", "Jumpsuit", "Holding on to you"],
+    "imgSrc": "./assets/img/acoustic.png",
+    "likeCount": 5,
+    "isLiked": false
+  },
+  {
+    "playlistID": 18,
+    "playlist_name": "Blues",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Johnny Boy", "March to the Sea", "Trapdoor", "A Car, a Torch, a Death", "Before You Start Your Day", "Isle of Flightless Birds", "Fall Away", "Friend, Please", "Oh Ms Believer", "Stressed Out", "Jumpsuit", "Holding on to you", "Ride", "Heathens", "Tear in My Heart"],
+    "imgSrc": "./assets/img/blues.png",
+    "likeCount": 7,
+    "isLiked": true
+  },
+  {
+    "playlistID": 19,
+    "playlist_name": "Soul",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["A Car, a Torch, a Death", "Before You Start Your Day", "Isle of Flightless Birds", "Fall Away", "Friend, Please", "Oh Ms Believer", "Stressed Out", "Jumpsuit", "Holding on to you", "Ride", "Heathens", "Tear in My Heart", "Lane Boy", "Car Radio", "The Hype"],
+    "imgSrc": "./assets/img/soul.png",
+    "likeCount": 6,
+    "isLiked": false
+  },
+  {
+    "playlistID": 20,
+    "playlist_name": "Reggae",
+    "playlist_author": "Dusuan",
+    "playlist_art": "idk",
+    "songs": ["Fall Away", "Friend, Please", "Oh Ms Believer", "Stressed Out", "Jumpsuit", "Holding on to you", "Ride", "Heathens", "Tear in My Heart", "Lane Boy", "Car Radio", "The Hype", "My Blood", "Chlorine", "Nico and the Niners"],
+    "imgSrc": "./assets/img/reggae.png",
+    "likeCount": 8,
+    "isLiked": true
   }
 ]

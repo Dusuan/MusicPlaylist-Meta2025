@@ -7,6 +7,13 @@ body {
   flex-direction: column;
 }
 
+.shufflBtn {
+  width: 100px;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 header {
   flex: 1;
   align-items: center;
@@ -18,7 +25,8 @@ header {
   justify-content: center;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 50px;
+  grid-template-columns: repeat(auto-fill, 200px);
 }
 
 #modal {
@@ -46,6 +54,9 @@ header {
   flex-direction: row;
 }
 #albumSongs {
+  height: 300px;
+  overflow: scroll;
+  scrollbar-width: none;
   display: flex;
   flex-direction: column;
 }
@@ -54,7 +65,7 @@ header {
   padding: 6px;
   border-width: 1px;
   border-radius: 10px;
-  border-style:solid;
+  border-style: solid;
   border-color: grey;
   margin-top: 10px;
   display: flex;
@@ -85,14 +96,14 @@ p {
   margin: 0;
 }
 
-#close:hover{
-    background-color: lightcoral;
+#close:hover {
+  background-color: lightcoral;
 }
-#close{
-    text-align: center;
+#close {
+  text-align: center;
 }
 
-.likeBtn{
+.likeBtn {
   padding: 4px;
   background-color: red;
 }
