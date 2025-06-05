@@ -13,18 +13,61 @@ function setModalOpen() {
   modal.style.display = "block";
 }
 
-function displayPlaylists(Playlists) {
+async function getData() {
+ let res;
+  await fetch("./data/data.json")
+    .then((response) => {
+    res = response.json();
+    })
+    return res;
+}
+
+async function displayPlaylists() {
+  let Playlists = await getData()
   console.log("I get here 1");
   console.log(Playlists[0]);
   console.log("I get here 2");
+//   Playlists.item.forEach((element) => {
+//       cardExplorer.innerHTML += /*html*/ `
+//       <div class="card">
+//         <img width="200px" height="200px" src={element.img} />
+//         <div
+//           id="cardText"
+//           style="
+//             flex: 1;
+//             margin-left: 10px;
+//             padding-top: 6px;
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: space-between;
+//           "
+//         >
+//           <div id="cardInfo">
+//             <h4>{element.playlist_name}</h4>
+//             <p>{element.playlist_author}</p>
+//           </div>
+//           <div
+//             id="cardLikes"
+//             style="
+//               padding-bottom: 10px;
+//               display: flex;
+//               align-items: center;
+//               gap: 8px;
+//             "
+//           >
+//             <img width="10px" height="10px" />
+//             <p> {element.likeCount} Likes</p>
+//           </div>
+//         </div>
+//       </div>
+//     `;
+//     });
 
-  Playlists.array.forEach(element => {
-    
-  });
 
-    console.log("I get here 3");
-  }
+  
 
+  console.log("I get here 3");
+}
 
 function sumOfEvens(int) {
   let sum = 0;
@@ -36,36 +79,5 @@ function sumOfEvens(int) {
   return sum;
 }
 
-displayPlaylists(fetch("./data/data.json").then((response) => response.json()));
 
-  <div class="card">
-        <img width="200px" height="200px" src={Playlist.img} />
-        <div
-          id="cardText"
-          style="
-            flex: 1;
-            margin-left: 10px;
-            padding-top: 6px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-          "
-        >
-          <div id="cardInfo">
-            <h4>{Playlist.playlist_name}</h4>
-            <p>{Playlist.playlist_author}</p>
-          </div>
-          <div
-            id="cardLikes"
-            style="
-              padding-bottom: 10px;
-              display: flex;
-              align-items: center;
-              gap: 8px;
-            "
-          >
-            <img width="10px" height="10px" />
-            <p> {Playlist.likeCount} Likes</p>
-          </div>
-        </div>
-      </div>
+displayPlaylists();
