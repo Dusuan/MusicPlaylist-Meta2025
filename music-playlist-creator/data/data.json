@@ -1,21 +1,35 @@
 [
   {
     "playlistID": 1,
-    "playlist_name": "I love TOP",
+    "playlist_name": "Twenty One Pilots",
     "playlist_author": "Dusuan",
     "playlist_art": "idk",
-    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you", "Ride", "Heathens", "Tear in My Heart", "Lane Boy", "Car Radio", "The Hype", "My Blood", "Chlorine", "Nico and the Niners", "Smithereens", "Neon Gravestones", "The Judge"],
+    "songs": [
+      {"title": "Stressed Out", "artist": "Twenty One Pilots", "duration": "3:22"},
+      {"title": "Jumpsuit", "artist": "Twenty One Pilots", "duration": "3:59"},
+      {"title": "Holding on to you", "artist": "Twenty One Pilots", "duration": "4:23"},
+      {"title": "Ride", "artist": "Twenty One Pilots", "duration": "3:34"},
+      {"title": "Heathens", "artist": "Twenty One Pilots", "duration": "3:15"},
+      {"title": "Tear in My Heart", "artist": "Twenty One Pilots", "duration": "3:08"}
+    ],
     "imgSrc": "./assets/img/top.png",
     "likeCount": 0,
     "isLiked": false
   },
   {
     "playlistID": 2,
-    "playlist_name": "Goat",
+    "playlist_name": "Best Alternative Rock",
     "playlist_author": "Dusuan",
     "playlist_art": "idk",
-    "songs": ["Stressed Out", "Jumpsuit", "Holding on to you", "Ride", "Heathens", "Tear in My Heart", "Lane Boy", "Car Radio", "The Hype", "My Blood", "Chlorine", "Nico and the Niners", "Smithereens", "Neon Gravestones", "The Judge"],
-    "imgSrc": "./assets/img/top.png",
+    "songs": [
+      {"title": "Lane Boy", "artist": "Twenty One Pilots", "duration": "4:13"},
+      {"title": "Car Radio", "artist": "Twenty One Pilots", "duration": "4:50"},
+      {"title": "The Hype", "artist": "Twenty One Pilots", "duration": "4:25"},
+      {"title": "My Blood", "artist": "Twenty One Pilots", "duration": "3:49"},
+      {"title": "Chlorine", "artist": "Twenty One Pilots", "duration": "5:24"},
+      {"title": "Nico and the Niners", "artist": "Twenty One Pilots", "duration": "3:45"}
+    ],
+    "imgSrc": "./assets/img/blurry.png",
     "likeCount": 0,
     "isLiked": false
   },
@@ -24,179 +38,305 @@
     "playlist_name": "Chill Vibes",
     "playlist_author": "Dusuan",
     "playlist_art": "idk",
-    "songs": ["Ride", "Heathens", "Tear in My Heart", "Lane Boy", "Car Radio", "The Hype", "My Blood", "Chlorine", "Nico and the Niners", "Smithereens", "Neon Gravestones", "The Judge", "Truce", "Goner", "Not Today"],
-    "imgSrc": "./assets/img/chill.png",
+    "songs": [
+      {"title": "Smithereens", "artist": "Twenty One Pilots", "duration": "2:57"},
+      {"title": "Neon Gravestones", "artist": "Twenty One Pilots", "duration": "4:00"},
+      {"title": "The Judge", "artist": "Twenty One Pilots", "duration": "4:57"},
+      {"title": "Truce", "artist": "Twenty One Pilots", "duration": "2:22"},
+      {"title": "Goner", "artist": "Twenty One Pilots", "duration": "3:56"},
+      {"title": "Not Today", "artist": "Twenty One Pilots", "duration": "3:58"}
+    ],
+    "imgSrc": "./assets/img/images.jpeg",
     "likeCount": 5,
     "isLiked": true
   },
   {
     "playlistID": 4,
-    "playlist_name": "Workout Mix",
-    "playlist_author": "Dusuan",
+    "playlist_name": "Alternative Rock Essentials",
+    "playlist_author": "Alex",
     "playlist_art": "idk",
-    "songs": ["Lane Boy", "Car Radio", "The Hype", "My Blood", "Chlorine", "Nico and the Niners", "Smithereens", "Neon Gravestones", "The Judge", "Truce", "Goner", "Not Today", "Polarize", "Doubt", "We Don't Believe What's on TV"],
-    "imgSrc": "./assets/img/workout.png",
+    "songs": [
+      {"title": "Numb", "artist": "Linkin Park", "duration": "3:07"},
+      {"title": "Demons", "artist": "Imagine Dragons", "duration": "2:57"},
+      {"title": "I Write Sins Not Tragedies", "artist": "Panic! At The Disco", "duration": "3:06"},
+      {"title": "Heathens", "artist": "Twenty One Pilots", "duration": "3:15"},
+      {"title": "In The End", "artist": "Linkin Park", "duration": "3:36"},
+      {"title": "Believer", "artist": "Imagine Dragons", "duration": "3:24"}
+    ],
+    "imgSrc": "./assets/img/linkinpark.png",
     "likeCount": 10,
-    "isLiked": true
+    "isLiked": false
   },
   {
     "playlistID": 5,
-    "playlist_name": "Party Hits",
-    "playlist_author": "Dusuan",
+    "playlist_name": "Emo & Alternative Hits",
+    "playlist_author": "Jess",
     "playlist_art": "idk",
-    "songs": ["My Blood", "Chlorine", "Nico and the Niners", "Smithereens", "Neon Gravestones", "The Judge", "Truce", "Goner", "Not Today", "Polarize", "Doubt", "We Don't Believe What's on TV", "Message Man", "Hometown", "Fairly Local"],
-    "imgSrc": "./assets/img/party.png",
-    "likeCount": 8,
-    "isLiked": false
-  },
-  {
-    "playlistID": 6,
-    "playlist_name": "Road Trip",
-    "playlist_author": "Dusuan",
-    "playlist_art": "idk",
-    "songs": ["Smithereens", "Neon Gravestones", "The Judge", "Truce", "Goner", "Not Today", "Polarize", "Doubt", "We Don't Believe What's on TV", "Message Man", "Hometown", "Fairly Local", "Levitate", "Pet Cheetah", "Legend"],
-    "imgSrc": "./assets/img/roadtrip.png",
-    "likeCount": 12,
-    "isLiked": true
-  },
-  {
-    "playlistID": 7,
-    "playlist_name": "Relaxation",
-    "playlist_author": "Dusuan",
-    "playlist_art": "idk",
-    "songs": ["Truce", "Goner", "Not Today", "Polarize", "Doubt", "We Don't Believe What's on TV", "Message Man", "Hometown", "Fairly Local", "Levitate", "Pet Cheetah", "Legend", "Bandito", "Cut My Lip", "Morph"],
-    "imgSrc": "./assets/img/relax.png",
-    "likeCount": 3,
-    "isLiked": false
-  },
-  {
-    "playlistID": 8,
-    "playlist_name": "Focus",
-    "playlist_author": "Dusuan",
-    "playlist_art": "idk",
-    "songs": ["Polarize", "Doubt", "We Don't Believe What's on TV", "Message Man", "Hometown", "Fairly Local", "Levitate", "Pet Cheetah", "Legend", "Bandito", "Cut My Lip", "Morph", "The Run and Go", "House of Gold", "Migraine"],
-    "imgSrc": "./assets/img/focus.png",
+    "songs": [
+      {"title": "Welcome to the Black Parade", "artist": "My Chemical Romance", "duration": "5:11"},
+      {"title": "Car Radio", "artist": "Twenty One Pilots", "duration": "4:50"},
+      {"title": "Misery Business", "artist": "Paramore", "duration": "3:31"},
+      {"title": "Somewhere I Belong", "artist": "Linkin Park", "duration": "3:34"},
+      {"title": "Ride", "artist": "Twenty One Pilots", "duration": "3:34"},
+      {"title": "I Write Sins Not Tragedies", "artist": "Panic! At The Disco", "duration": "3:06"}
+    ],
+    "imgSrc": "./assets/img/nirvana.jpg",
     "likeCount": 7,
     "isLiked": true
   },
   {
-    "playlistID": 9,
-    "playlist_name": "Throwback",
-    "playlist_author": "Dusuan",
+    "playlistID": 6,
+    "playlist_name": "Chill Alternative Mix",
+    "playlist_author": "Sam",
     "playlist_art": "idk",
-    "songs": ["Message Man", "Hometown", "Fairly Local", "Levitate", "Pet Cheetah", "Legend", "Bandito", "Cut My Lip", "Morph", "The Run and Go", "House of Gold", "Migraine", "Ode to Sleep", "Forest", "Glowing Eyes"],
-    "imgSrc": "./assets/img/throwback.png",
-    "likeCount": 6,
+    "songs": [
+      {"title": "Sweater Weather", "artist": "The Neighbourhood", "duration": "4:00"},
+      {"title": "Stressed Out", "artist": "Twenty One Pilots", "duration": "3:22"},
+      {"title": "Numb", "artist": "Linkin Park", "duration": "3:07"},
+      {"title": "Renegades", "artist": "X Ambassadors", "duration": "3:15"},
+      {"title": "Demons", "artist": "Imagine Dragons", "duration": "2:57"},
+      {"title": "Ride", "artist": "Twenty One Pilots", "duration": "3:34"}
+    ],
+    "imgSrc": "./assets/img/quens.png",
+    "likeCount": 3,
+    "isLiked": false
+  },
+  {
+    "playlistID": 7,
+    "playlist_name": "Rock & Rap Fusion",
+    "playlist_author": "Liam",
+    "playlist_art": "idk",
+    "songs": [
+      {"title": "Papercut", "artist": "Linkin Park", "duration": "3:05"},
+      {"title": "Stressed Out", "artist": "Twenty One Pilots", "duration": "3:22"},
+      {"title": "Thunder", "artist": "Imagine Dragons", "duration": "3:07"},
+      {"title": "My Songs Know What You Did in the Dark", "artist": "Fall Out Boy", "duration": "3:32"},
+      {"title": "Ride", "artist": "Twenty One Pilots", "duration": "3:34"},
+      {"title": "In The End", "artist": "Linkin Park", "duration": "3:36"}
+    ],
+    "imgSrc": "./assets/img/pillows.jpg",
+    "likeCount": 8,
+    "isLiked": false
+  },
+  {
+    "playlistID": 8,
+    "playlist_name": "Top Collabs & Covers",
+    "playlist_author": "Maya",
+    "playlist_art": "idk",
+    "songs": [
+      {"title": "Heathens (Cover)", "artist": "Panic! At The Disco", "duration": "3:15"},
+      {"title": "Car Radio (Acoustic)", "artist": "Twenty One Pilots", "duration": "4:51"},
+      {"title": "Numb (Live)", "artist": "Linkin Park", "duration": "3:37"},
+      {"title": "Holding on to you (Remix)", "artist": "Twenty One Pilots feat. K.Flay", "duration": "4:25"},
+      {"title": "Chlorine", "artist": "Twenty One Pilots", "duration": "5:24"},
+      {"title": "In The End (Acoustic)", "artist": "Linkin Park", "duration": "3:42"}
+    ],
+    "imgSrc": "./assets/img/gorillaz.jpg",
+    "likeCount": 12,
+    "isLiked": true
+  },
+  {
+    "playlistID": 9,
+    "playlist_name": "Motivation Mix",
+    "playlist_author": "Jaden",
+    "playlist_art": "idk",
+    "songs": [
+      {"title": "Believer", "artist": "Imagine Dragons", "duration": "3:24"},
+      {"title": "Ride", "artist": "Twenty One Pilots", "duration": "3:34"},
+      {"title": "Fight Song", "artist": "Rachel Platten", "duration": "3:24"},
+      {"title": "Numb", "artist": "Linkin Park", "duration": "3:07"},
+      {"title": "Thunder", "artist": "Imagine Dragons", "duration": "3:07"},
+      {"title": "My Blood", "artist": "Twenty One Pilots", "duration": "3:49"}
+    ],
+    "imgSrc": "./assets/img/gorillaz2.jpg",
+    "likeCount": 9,
     "isLiked": false
   },
   {
     "playlistID": 10,
-    "playlist_name": "Indie Mix",
-    "playlist_author": "Dusuan",
+    "playlist_name": "Late Night Vibes",
+    "playlist_author": "Ella",
     "playlist_art": "idk",
-    "songs": ["Levitate", "Pet Cheetah", "Legend", "Bandito", "Cut My Lip", "Morph", "The Run and Go", "House of Gold", "Migraine", "Ode to Sleep", "Forest", "Glowing Eyes", "Kitchen Sink", "Lovely", "Ruby"],
-    "imgSrc": "./assets/img/indie.png",
-    "likeCount": 9,
+    "songs": [
+      {"title": "Neon Gravestones", "artist": "Twenty One Pilots", "duration": "4:00"},
+      {"title": "Sweater Weather", "artist": "The Neighbourhood", "duration": "4:00"},
+      {"title": "Someone You Loved", "artist": "Lewis Capaldi", "duration": "3:02"},
+      {"title": "Truce", "artist": "Twenty One Pilots", "duration": "2:22"},
+      {"title": "Goner", "artist": "Twenty One Pilots", "duration": "3:56"},
+      {"title": "Too Good at Goodbyes", "artist": "Sam Smith", "duration": "3:21"}
+    ],
+    "imgSrc": "./assets/img/foo.avif",
+    "likeCount": 4,
     "isLiked": true
   },
   {
     "playlistID": 11,
-    "playlist_name": "Pop Hits",
-    "playlist_author": "Dusuan",
+    "playlist_name": "Throwback Rock",
+    "playlist_author": "Noah",
     "playlist_art": "idk",
-    "songs": ["Bandito", "Cut My Lip", "Morph", "The Run and Go", "House of Gold", "Migraine", "Ode to Sleep", "Forest", "Glowing Eyes", "Kitchen Sink", "Lovely", "Ruby", "Anathema", "Be Concerned", "Clear"],
-    "imgSrc": "./assets/img/pop.png",
-    "likeCount": 4,
+    "songs": [
+      {"title": "In The End", "artist": "Linkin Park", "duration": "3:36"},
+      {"title": "The Kill (Bury Me)", "artist": "Thirty Seconds to Mars", "duration": "3:52"},
+      {"title": "Mr. Brightside", "artist": "The Killers", "duration": "3:43"},
+      {"title": "Welcome to the Black Parade", "artist": "My Chemical Romance", "duration": "5:11"},
+      {"title": "Car Radio", "artist": "Twenty One Pilots", "duration": "4:50"},
+      {"title": "Papercut", "artist": "Linkin Park", "duration": "3:05"}
+    ],
+    "imgSrc": "./assets/img/foof.jpg",
+    "likeCount": 6,
     "isLiked": false
   },
   {
     "playlistID": 12,
-    "playlist_name": "Rock Anthems",
-    "playlist_author": "Dusuan",
+    "playlist_name": "Upbeat Alt Anthems",
+    "playlist_author": "Chloe",
     "playlist_art": "idk",
-    "songs": ["The Run and Go", "House of Gold", "Migraine", "Ode to Sleep", "Forest", "Glowing Eyes", "Kitchen Sink", "Lovely", "Ruby", "Anathema", "Be Concerned", "Clear", "Fake You Out", "Goner", "Trees"],
-    "imgSrc": "./assets/img/rock.png",
+    "songs": [
+      {"title": "Lane Boy", "artist": "Twenty One Pilots", "duration": "4:13"},
+      {"title": "Shut Up and Dance", "artist": "Walk The Moon", "duration": "3:19"},
+      {"title": "Uptown Funk", "artist": "Mark Ronson feat. Bruno Mars", "duration": "4:30"},
+      {"title": "Stressed Out", "artist": "Twenty One Pilots", "duration": "3:22"},
+      {"title": "I Write Sins Not Tragedies", "artist": "Panic! At The Disco", "duration": "3:06"},
+      {"title": "Demons", "artist": "Imagine Dragons", "duration": "2:57"}
+    ],
+    "imgSrc": "./assets/img/caifanes.jpg",
     "likeCount": 11,
     "isLiked": true
   },
   {
     "playlistID": 13,
-    "playlist_name": "Jazz Classics",
-    "playlist_author": "Dusuan",
+    "playlist_name": "Mellow Moods",
+    "playlist_author": "Olivia",
     "playlist_art": "idk",
-    "songs": ["Ode to Sleep", "Forest", "Glowing Eyes", "Kitchen Sink", "Lovely", "Ruby", "Anathema", "Be Concerned", "Clear", "Fake You Out", "Goner", "Trees", "Screen", "The Pantaloon", "Taxi Cab"],
-    "imgSrc": "./assets/img/jazz.png",
+    "songs": [
+      {"title": "Not Today", "artist": "Twenty One Pilots", "duration": "3:58"},
+      {"title": "Gravity", "artist": "John Mayer", "duration": "4:05"},
+      {"title": "Neon Gravestones", "artist": "Twenty One Pilots", "duration": "4:00"},
+      {"title": "Stay", "artist": "Rihanna feat. Mikky Ekko", "duration": "4:00"},
+      {"title": "Truce", "artist": "Twenty One Pilots", "duration": "2:22"},
+      {"title": "Yellow", "artist": "Coldplay", "duration": "4:29"}
+    ],
+    "imgSrc": "./assets/img/bjork.png",
     "likeCount": 2,
     "isLiked": false
   },
   {
     "playlistID": 14,
-    "playlist_name": "Hip Hop",
-    "playlist_author": "Dusuan",
+    "playlist_name": "Festival Ready",
+    "playlist_author": "Ethan",
     "playlist_art": "idk",
-    "songs": ["Kitchen Sink", "Lovely", "Ruby", "Anathema", "Be Concerned", "Clear", "Fake You Out", "Goner", "Trees", "Screen", "The Pantaloon", "Taxi Cab", "Johnny Boy", "March to the Sea", "Trapdoor"],
-    "imgSrc": "./assets/img/hiphop.png",
-    "likeCount": 13,
-    "isLiked": true
-  },
-  {
-    "playlistID": 15,
-    "playlist_name": "Classical",
-    "playlist_author": "Dusuan",
-    "playlist_art": "idk",
-    "songs": ["Anathema", "Be Concerned", "Clear", "Fake You Out", "Goner", "Trees", "Screen", "The Pantaloon", "Taxi Cab", "Johnny Boy", "March to the Sea", "Trapdoor", "A Car, a Torch, a Death", "Before You Start Your Day", "Isle of Flightless Birds"],
-    "imgSrc": "./assets/img/classical.png",
-    "likeCount": 1,
-    "isLiked": false
-  },
-  {
-    "playlistID": 16,
-    "playlist_name": "Electronic",
-    "playlist_author": "Dusuan",
-    "playlist_art": "idk",
-    "songs": ["Fake You Out", "Goner", "Trees", "Screen", "The Pantaloon", "Taxi Cab", "Johnny Boy", "March to the Sea", "Trapdoor", "A Car, a Torch, a Death", "Before You Start Your Day", "Isle of Flightless Birds", "Fall Away", "Friend, Please", "Oh Ms Believer"],
-    "imgSrc": "./assets/img/electronic.png",
+    "songs": [
+      {"title": "Ride", "artist": "Twenty One Pilots", "duration": "3:34"},
+      {"title": "Pompeii", "artist": "Bastille", "duration": "3:34"},
+      {"title": "Believer", "artist": "Imagine Dragons", "duration": "3:24"},
+      {"title": "Chlorine", "artist": "Twenty One Pilots", "duration": "5:24"},
+      {"title": "Shut Up and Dance", "artist": "Walk The Moon", "duration": "3:19"},
+      {"title": "Counting Stars", "artist": "OneRepublic", "duration": "4:17"}
+    ],
+    "imgSrc": "./assets/img/imagine.jpg",
     "likeCount": 14,
     "isLiked": true
   },
   {
-    "playlistID": 17,
-    "playlist_name": "Acoustic",
-    "playlist_author": "Dusuan",
+    "playlistID": 15,
+    "playlist_name": "Hardcore Hits",
+    "playlist_author": "Mason",
     "playlist_art": "idk",
-    "songs": ["Screen", "The Pantaloon", "Taxi Cab", "Johnny Boy", "March to the Sea", "Trapdoor", "A Car, a Torch, a Death", "Before You Start Your Day", "Isle of Flightless Birds", "Fall Away", "Friend, Please", "Oh Ms Believer", "Stressed Out", "Jumpsuit", "Holding on to you"],
-    "imgSrc": "./assets/img/acoustic.png",
+    "songs": [
+      {"title": "Papercut", "artist": "Linkin Park", "duration": "3:05"},
+      {"title": "Jumpsuit", "artist": "Twenty One Pilots", "duration": "3:59"},
+      {"title": "The Hype", "artist": "Twenty One Pilots", "duration": "4:25"},
+      {"title": "Faint", "artist": "Linkin Park", "duration": "2:42"},
+      {"title": "Welcome to the Black Parade", "artist": "My Chemical Romance", "duration": "5:11"},
+      {"title": "Tear in My Heart", "artist": "Twenty One Pilots", "duration": "3:08"}
+    ],
+    "imgSrc": "./assets/img/pillows.jpg",
     "likeCount": 5,
     "isLiked": false
   },
   {
-    "playlistID": 18,
-    "playlist_name": "Blues",
-    "playlist_author": "Dusuan",
+    "playlistID": 16,
+    "playlist_name": "Indie & Alternative",
+    "playlist_author": "Ava",
     "playlist_art": "idk",
-    "songs": ["Johnny Boy", "March to the Sea", "Trapdoor", "A Car, a Torch, a Death", "Before You Start Your Day", "Isle of Flightless Birds", "Fall Away", "Friend, Please", "Oh Ms Believer", "Stressed Out", "Jumpsuit", "Holding on to you", "Ride", "Heathens", "Tear in My Heart"],
-    "imgSrc": "./assets/img/blues.png",
-    "likeCount": 7,
-    "isLiked": true
-  },
-  {
-    "playlistID": 19,
-    "playlist_name": "Soul",
-    "playlist_author": "Dusuan",
-    "playlist_art": "idk",
-    "songs": ["A Car, a Torch, a Death", "Before You Start Your Day", "Isle of Flightless Birds", "Fall Away", "Friend, Please", "Oh Ms Believer", "Stressed Out", "Jumpsuit", "Holding on to you", "Ride", "Heathens", "Tear in My Heart", "Lane Boy", "Car Radio", "The Hype"],
-    "imgSrc": "./assets/img/soul.png",
-    "likeCount": 6,
+    "songs": [
+      {"title": "Sweater Weather", "artist": "The Neighbourhood", "duration": "4:00"},
+      {"title": "Ride", "artist": "Twenty One Pilots", "duration": "3:34"},
+      {"title": "Electric Feel", "artist": "MGMT", "duration": "3:49"},
+      {"title": "Goner", "artist": "Twenty One Pilots", "duration": "3:56"},
+      {"title": "Pumped Up Kicks", "artist": "Foster the People", "duration": "4:00"},
+      {"title": "Neon Gravestones", "artist": "Twenty One Pilots", "duration": "4:00"}
+    ],
+    "imgSrc": "./assets/img/minecraft.jpeg",
+    "likeCount": 8,
     "isLiked": false
   },
   {
-    "playlistID": 20,
-    "playlist_name": "Reggae",
-    "playlist_author": "Dusuan",
+    "playlistID": 17,
+    "playlist_name": "Feel-Good Alternative",
+    "playlist_author": "Lucas",
     "playlist_art": "idk",
-    "songs": ["Fall Away", "Friend, Please", "Oh Ms Believer", "Stressed Out", "Jumpsuit", "Holding on to you", "Ride", "Heathens", "Tear in My Heart", "Lane Boy", "Car Radio", "The Hype", "My Blood", "Chlorine", "Nico and the Niners"],
-    "imgSrc": "./assets/img/reggae.png",
-    "likeCount": 8,
+    "songs": [
+      {"title": "Ride", "artist": "Twenty One Pilots", "duration": "3:34"},
+      {"title": "Counting Stars", "artist": "OneRepublic", "duration": "4:17"},
+      {"title": "Heathens", "artist": "Twenty One Pilots", "duration": "3:15"},
+      {"title": "Shut Up and Dance", "artist": "Walk The Moon", "duration": "3:19"},
+      {"title": "Demons", "artist": "Imagine Dragons", "duration": "2:57"},
+      {"title": "Tear in My Heart", "artist": "Twenty One Pilots", "duration": "3:08"}
+    ],
+    "imgSrc": "./assets/img/selftitled.png",
+    "likeCount": 6,
     "isLiked": true
+  },
+  {
+    "playlistID": 18,
+    "playlist_name": "Rock Ballads",
+    "playlist_author": "Sophia",
+    "playlist_art": "idk",
+    "songs": [
+      {"title": "Somewhere I Belong", "artist": "Linkin Park", "duration": "3:34"},
+      {"title": "The Judge", "artist": "Twenty One Pilots", "duration": "4:57"},
+      {"title": "Iris", "artist": "Goo Goo Dolls", "duration": "4:50"},
+      {"title": "Goner", "artist": "Twenty One Pilots", "duration": "3:56"},
+      {"title": "Come As You Are", "artist": "Nirvana", "duration": "3:39"},
+      {"title": "Truce", "artist": "Twenty One Pilots", "duration": "2:22"}
+    ],
+    "imgSrc": "./assets/img/vessel.png",
+    "likeCount": 3,
+    "isLiked": false
+  },
+  {
+    "playlistID": 19,
+    "playlist_name": "Top Hits 2010s",
+    "playlist_author": "Ella",
+    "playlist_art": "idk",
+    "songs": [
+      {"title": "Heathens", "artist": "Twenty One Pilots", "duration": "3:15"},
+      {"title": "Counting Stars", "artist": "OneRepublic", "duration": "4:17"},
+      {"title": "Pompeii", "artist": "Bastille", "duration": "3:34"},
+      {"title": "Demons", "artist": "Imagine Dragons", "duration": "2:57"},
+      {"title": "Ride", "artist": "Twenty One Pilots", "duration": "3:34"},
+      {"title": "Shut Up and Dance", "artist": "Walk The Moon", "duration": "3:19"}
+    ],
+    "imgSrc": "./assets/img/soda.jpeg",
+    "likeCount": 15,
+    "isLiked": true
+  },
+  {
+    "playlistID": 20,
+    "playlist_name": "Sad & Reflective",
+    "playlist_author": "Mia",
+    "playlist_art": "idk",
+    "songs": [
+      {"title": "Neon Gravestones", "artist": "Twenty One Pilots", "duration": "4:00"},
+      {"title": "Someone You Loved", "artist": "Lewis Capaldi", "duration": "3:02"},
+      {"title": "The Judge", "artist": "Twenty One Pilots", "duration": "4:57"},
+      {"title": "Skinny Love", "artist": "Bon Iver", "duration": "3:58"},
+      {"title": "Truce", "artist": "Twenty One Pilots", "duration": "2:22"},
+      {"title": "Say Something", "artist": "A Great Big World feat. Christina Aguilera", "duration": "3:48"}
+    ],
+    "imgSrc": "./assets/img/heroes.jpg",
+    "likeCount": 4,
+    "isLiked": false
   }
 ]
