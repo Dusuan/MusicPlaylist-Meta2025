@@ -30,9 +30,11 @@ header {
   align-items: center;
   color: white;
   background-color: rgb(29, 29, 29);
+  box-shadow: 5px 5px 5px rgb(31, 31, 31);
 }
 
 #playlist-cards {
+  align-items: center;
   justify-content: center;
   padding: 20px;
   display: grid;
@@ -206,6 +208,9 @@ p {
   color: whitesmoke;
   background-color: #707070;
   display: flex;
+  border-style: none;
+  height: 100px;
+  border-radius: 10px;
 }
 #searchContainer {
   align-items: center;
@@ -239,8 +244,20 @@ p {
   align-items: center;
   justify-content: space-between;
 }
-#sorting{
+#sorting {
   height: 30px;
   color: white;
   background-color: #434343;
+}
+.footer {
+  margin-top: 50px;
+  height: 100px;
+  box-shadow: 10px 10px 30px rgb(84, 84, 84);
+  background-color: #434343;
+}
+.nothing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }

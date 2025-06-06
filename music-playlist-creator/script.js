@@ -67,8 +67,23 @@ function filter(Playlists) {
 async function renderPlaylist(Playlists) {
   const cardChildren = cardExplorer.children;
   const cardArray = [...cardChildren];
-
+  
+  
   cardArray.forEach((item) => cardExplorer.removeChild(item));
+
+   if(Playlists.length < 1){
+    nothing = document.createElement("div")
+    nothing.innerHTML = `<div id="nothing" class="nothing">
+    <h1>Nothing to see here!</h1>
+    </div>`
+
+    cardExplorer.insertAdjacentElement("beforebegin", nothing)
+
+  }
+
+  const nothing = document.getElementsByClassName("nothing")
+
+  
 
   Playlists.forEach((element) => {
     newCard = document.createElement("div");
@@ -153,6 +168,8 @@ function renderSongs(PlaylistData) {
       />
       <div style="margin-left: 20px">
       <h1>${PlaylistData.playlist_name}</h1>
+            <p>Date created: ${PlaylistData.timeCreated}</p>
+
       <p>${PlaylistData.playlist_author}</p>
       </div>
           </div>
@@ -166,6 +183,7 @@ function renderSongs(PlaylistData) {
   console.log(albumSongsPart[0]);
   let songs = PlaylistData.songs;
   console.log(songs);
+ 
   songs.forEach((song) => {
     let newSong = document.createElement("div");
     newSong.innerHTML = `
