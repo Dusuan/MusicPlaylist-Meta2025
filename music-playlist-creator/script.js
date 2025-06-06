@@ -1,3 +1,4 @@
+// Getting all references to html
 const modal = document.getElementById("modal");
 const card = document.getElementById("card");
 const closeModal = document.getElementById("close");
@@ -6,13 +7,14 @@ const featured = document.getElementById("MainPlaylist");
 const search = document.getElementById("search");
 const clearBtn = document.getElementById("clearBtn")
 const searchBtn = document.getElementById("searchBtn")
+// Logic 
+
 function setModalClosed() {
   modal.style.display = "none";
 }
 function setModalOpen() {
   modal.style.display = "block";
 }
-
 async function getData() {
   let res;
   await fetch("./data/data.json").then((response) => {
@@ -22,6 +24,8 @@ async function getData() {
 }
 async function displayPlaylists() {
   let Playlists = await getData();
+
+   // I believe this is better, but for sake of the review i just commented it 
   // search.oninput = () => {
   //   const normfilt = search.value.toLowerCase().replace(/\s+/g, "");
   //   const FilteredPlaylists = Playlists.filter((playlist) => {
@@ -31,15 +35,15 @@ async function displayPlaylists() {
   //   renderPlaylist(FilteredPlaylists);
   // };
 
-  searchBtn.addEventListener("click", () => {
-    const normfilt = search.value.toLowerCase().replace(/\s+/g, "");
-    const FilteredPlaylists = Playlists.filter((playlist) => {
-      const play = playlist.playlist_name.toLowerCase();
-      const author = playlist.playlist_author.toLowerCase();
-      return play.replace(/\s+/g, "").includes(normfilt) || author.replace(/\s+/g, "").includes(normfilt) ;
-    });
-    renderPlaylist(FilteredPlaylists);
+
+  search.addEventListener("keypress", (event) => {
+  if(event.key === "Enter"){
+    event.preventDefault()
+    filter(Playlists)
+  }
   })
+
+  searchBtn.addEventListener("click", () => filter(Playlists))
 
   clearBtn.addEventListener("click", () => {
     search.value="";
@@ -48,6 +52,19 @@ async function displayPlaylists() {
 
   renderPlaylist(Playlists);
 }
+
+function filter(Playlists){
+  
+    const normfilt = search.value.toLowerCase().replace(/\s+/g, "");
+    const FilteredPlaylists = Playlists.filter((playlist) => {
+      const play = playlist.playlist_name.toLowerCase();
+      const author = playlist.playlist_author.toLowerCase();
+      return play.replace(/\s+/g, "").includes(normfilt) || author.replace(/\s+/g, "").includes(normfilt) ;
+    });
+    renderPlaylist(FilteredPlaylists);
+  
+}
+
 async function renderPlaylist(Playlists) {
   const cardChildren = cardExplorer.children;
   const cardArray = [...cardChildren];
@@ -83,7 +100,7 @@ async function renderPlaylist(Playlists) {
     const deleteBtn = newCard.getElementsByClassName("deleteCard");
     const likeBtn = newCard.getElementsByClassName("likeBtn");
     const image = newCard.getElementsByTagName("img")[0];
-    image.onclick = () => openModal(element);
+    image.onclick = () => renderSongs(element);
     deleteBtn[0].addEventListener("click", () =>
       deleteCard(Playlists, element)
     );
@@ -114,76 +131,6 @@ function deleteCard(Playlists, card) {
     return song.playlistID !== cardId;
   });
   renderPlaylist(FilteredPlaylist);
-}
-function openModal(PlaylistData) {
-  xbtn = document.createElement("div");
-  xbtn.innerHTML = `<div id="close" class="x" style="width: 20px; height: 20px; padding: 10px">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
-          </div>`;
-  modal.innerHTML = /*html*/ `<div id="modalContent">
-      <div id="albumSection" class="x">
-      <div style="display: flex">
-      <img
-      style="border-radius: 6px"
-      width="200px"
-      height="200px"
-      src="${PlaylistData.imgSrc}"
-      />
-      <div style="margin-left: 20px">
-      <h1>${PlaylistData.playlist_name}</h1>
-      <p>${PlaylistData.playlist_author}</p>
-      </div>
-          </div>
-          
-        </div>
-        <div><button class="Btn">Shuffle</button></div>
-        <div id="albumSongs" class="albumSongs">
-
-      </div>`;
-
-  const albumSongsPart = modal.getElementsByClassName("albumSongs");
-  console.log(albumSongsPart[0]);
-  let songs = PlaylistData.songs;
-  console.log(songs);
-  songs.forEach((song) => {
-    let newSong = document.createElement("div");
-    newSong.innerHTML = `
-    <div id="song">
-            <img
-              style="border-radius: 4px"
-              width="50px"
-              src="${PlaylistData.imgSrc}"
-            />
-            <div
-              style="
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-              "
-            >
-              <div>
-                <p>${song.title}</p>
-                <p>${song.artist}</p>
-              </div>
-              <div>
-                <p>${song.duration}</p>
-              </div>
-            </div>
-          </div>`;
-
-    albumSongsPart[0].appendChild(newSong);
-  });
-
-  const playlistSection = modal.getElementsByClassName("x");
-  const shufflBtn = modal.getElementsByClassName("Btn");
-  shufflBtn[0].addEventListener("click", () =>
-    shuffle(PlaylistData, PlaylistData.songs)
-  );
-  xbtn.onclick = () => setModalClosed();
-  playlistSection[0].appendChild(xbtn);
-  setModalOpen();
 }
 function renderSongs(PlaylistData) {
   const modalChildren = modal.children;
@@ -267,7 +214,6 @@ function shuffle(PlaylistData, songs) {
 
   renderSongs(PlaylistData);
 }
-
 async function RandomPlaylist() {
   let Playlists = await getData();
   let rand = Playlists[Math.floor(Math.random() * Playlists.length)];
@@ -279,8 +225,9 @@ async function displayFeatured() {
   featured.innerHTML = `<div id="featuredContainer">
             <div id="playlistImage">
                 <img width="400px" height="400px" src="${randPlaylist.imgSrc}">
-                <div>
+                <div class="center">
                     <h1>${randPlaylist.playlist_name}</h1>
+                    <p>Created by: "${randPlaylist.playlist_author}"</p>
                 </div>
             </div>
             <div id="playlistSongs" class="featuredPlaylist">
@@ -307,3 +254,77 @@ async function displayFeatured() {
 
 displayPlaylists();
 displayFeatured();
+
+// Code that got cleaned up but might want to keep in hand >>> {
+//
+// function openModal(PlaylistData) {
+//   xbtn = document.createElement("div");
+//   xbtn.innerHTML = `<div id="close" class="x" style="width: 20px; height: 20px; padding: 10px">
+//             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+//           </div>`;
+//   modal.innerHTML = /*html*/ `<div id="modalContent">
+//       <div id="albumSection" class="x">
+//       <div style="display: flex">
+//       <img
+//       style="border-radius: 6px"
+//       width="200px"
+//       height="200px"
+//       src="${PlaylistData.imgSrc}"
+//       />
+//       <div style="margin-left: 20px">
+//       <h1>${PlaylistData.playlist_name}</h1>
+//       <p>${PlaylistData.playlist_author}</p>
+//       </div>
+//           </div>
+          
+//         </div>
+//         <div><button class="Btn">Shuffle</button></div>
+//         <div id="albumSongs" class="albumSongs">
+
+//       </div>`;
+
+//   const albumSongsPart = modal.getElementsByClassName("albumSongs");
+//   console.log(albumSongsPart[0]);
+//   let songs = PlaylistData.songs;
+//   console.log(songs);
+//   songs.forEach((song) => {
+//     let newSong = document.createElement("div");
+//     newSong.innerHTML = `
+//     <div id="song">
+//             <img
+//               style="border-radius: 4px"
+//               width="50px"
+//               src="${PlaylistData.imgSrc}"
+//             />
+//             <div
+//               style="
+//                 width: 100%;
+//                 display: flex;
+//                 flex-direction: row;
+//                 align-items: center;
+//                 justify-content: space-between;
+//               "
+//             >
+//               <div>
+//                 <p>${song.title}</p>
+//                 <p>${song.artist}</p>
+//               </div>
+//               <div>
+//                 <p>${song.duration}</p>
+//               </div>
+//             </div>
+//           </div>`;
+
+//     albumSongsPart[0].appendChild(newSong);
+//   });
+
+//   const playlistSection = modal.getElementsByClassName("x");
+//   const shufflBtn = modal.getElementsByClassName("Btn");
+//   shufflBtn[0].addEventListener("click", () =>
+//     shuffle(PlaylistData, PlaylistData.songs)
+//   );
+//   xbtn.onclick = () => setModalClosed();
+//   playlistSection[0].appendChild(xbtn);
+//   setModalOpen();
+// }
+//}

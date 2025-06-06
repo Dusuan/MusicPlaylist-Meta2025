@@ -102,16 +102,16 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
   - [x] When clicked, the playlist is removed from the playlist grid view.
 
 - [ ] **Search Functionality**
-  - [ ] Implement a search bar that allows users to filter playlists by:
+  - [x] Implement a search bar that allows users to filter playlists by:
     - [x] Name 
-    - [ ] Author
-  - [ ] The search bar should include:
+    - [x] Author
+  - [x] The search bar should include:
     - [x] Text input field
-    - [ ] Submit/Search Button
-    - [ ] Clear Button
-  - [ ] Playlists matching the search query in the text input are displayed in a grid view when the user:
-    - [ ] Presses the Enter Key
-    - [ ] Clicks the Submit/Search Button 
+    - [x] Submit/Search Button
+    - [x] Clear Button
+  - [x] Playlists matching the search query in the text input are displayed in a grid view when the user:
+    - [x] Presses the Enter Key
+    - [x] Clicks the Submit/Search Button 
   - [ ] User can click the clear button. When clicked:
     - [ ] All text in the text input field is deleted
     - [ ] All playlists in the `data.json` file are displayed in a grid view
