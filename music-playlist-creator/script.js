@@ -3,8 +3,7 @@ const card = document.getElementById("card");
 const closeModal = document.getElementById("close");
 const cardExplorer = document.getElementById("playlist-cards");
 const featured = document.getElementById("MainPlaylist");
-// card.addEventListener("click", setModalOpen)
-// closeModal.addEventListener("click", setModalClosed);
+const search = document.getElementById("search");
 
 function setModalClosed() {
   modal.style.display = "none";
@@ -22,6 +21,14 @@ async function getData() {
 }
 async function displayPlaylists() {
   let Playlists = await getData();
+  search.oninput = () => {
+    const normfilt = search.value.toLowerCase().replace(/\s+/g, "")
+    const FilteredPlaylists = Playlists.filter((playlist) => {
+      const play = playlist.playlist_name.toLowerCase()
+      return play.replace(/\s+/g, "").includes(normfilt)
+    });
+    renderPlaylist(FilteredPlaylists);
+  };
   renderPlaylist(Playlists);
 }
 async function renderPlaylist(Playlists) {
@@ -34,38 +41,34 @@ async function renderPlaylist(Playlists) {
     newCard = document.createElement("div");
     newCard.innerHTML = `<div id="id-${element.playlistID}" class="card">
         <img width="200px" height="200px" src=${element.imgSrc} />
-        <div
-          style="
-            flex: 1;
-            margin-left: 10px;
-            padding-top: 6px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-          "
-        >
-          <div>
+        <div class="cardContent">
+          <div style="display:flex; justify-content: space-between">
+           <div>
             <h4>${element.playlist_name}</h4>
             <p>${element.playlist_author}</p>
+            </div>
+            <div class="deleteCard" style="margin-right: 10px">
+              <img class="" src="" width="10px" height="10px" />
+            </div>
           </div>
+
+
           <div
-          
-            style="
-              padding-bottom: 10px;
-              display: flex;
-              align-items: center;
-              gap: 8px;
-            "
+            class="cardMenu"
           >
             <img class="likeBtn" src="" width="10px" height="10px" />
             <p> ${element.likeCount} Likes</p>
           </div>
-          </div>
-          </div>`;
+        </div>
+      </div>`;
 
+    const deleteBtn = newCard.getElementsByClassName("deleteCard");
     const likeBtn = newCard.getElementsByClassName("likeBtn");
     const image = newCard.getElementsByTagName("img")[0];
     image.onclick = () => openModal(element);
+    deleteBtn[0].addEventListener("click", () =>
+      deleteCard(Playlists, element)
+    );
     likeBtn[0].addEventListener("click", () => like(Playlists, element));
     cardExplorer.appendChild(newCard);
   });
@@ -84,6 +87,13 @@ function like(Playlists, PlaylistData) {
   }
 
   renderPlaylist(Playlists);
+}
+function deleteCard(Playlists, card) {
+  const cardId = card.playlistID;
+  const FilteredPlaylist = Playlists.filter((song) => {
+    return song.playlistID !== cardId;
+  });
+  renderPlaylist(FilteredPlaylist);
 }
 function openModal(PlaylistData) {
   xbtn = document.createElement("div");
@@ -262,12 +272,11 @@ async function displayFeatured() {
         </div>`;
 
   let featuredPlaylist = featured.getElementsByClassName("featuredPlaylist");
-  let songs = randPlaylist.songs
-  console.log(featuredPlaylist)
+  let songs = randPlaylist.songs;
+  console.log(featuredPlaylist);
   songs.forEach((song) => {
     let newSong = document.createElement("div");
-    newSong.innerHTML = 
-    `<div class="featuredSongs">
+    newSong.innerHTML = `<div class="featuredSongs">
                     <img width="80px" height="80px" src="./assets/img/top.png">
                     <div>
                         <h3>${song}</h3>
@@ -275,10 +284,9 @@ async function displayFeatured() {
                         <p>2:25</p>
                     </div>
        </div>`;
-      featuredPlaylist[0].appendChild(newSong)
-
+    featuredPlaylist[0].appendChild(newSong);
   });
 }
 
-displayFeatured();
 displayPlaylists();
+displayFeatured();

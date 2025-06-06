@@ -12,7 +12,7 @@ h1 {
   margin: 0px;
   text-align: center;
 }
-h3{
+h3 {
   padding: 0px;
   margin: 0px;
   text-align: start;
@@ -124,7 +124,7 @@ p {
   background-color: red;
 }
 
-.headerBtn {
+.Btn {
   padding: 10px;
   background-color: black;
   border-radius: 8px;
@@ -152,4 +152,31 @@ p {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+#addCard {
+  display: flex;
+  justify-content: center;
+}
+
+.cardContent {
+  flex: 1;
+  margin-left: 10px;
+  padding-top: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cardMenu {
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#onTopCard{
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
