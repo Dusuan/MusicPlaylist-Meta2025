@@ -2,7 +2,7 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
+  background-color: #2e2e2e;
   display: flex;
   flex-direction: column;
 }
@@ -51,6 +51,7 @@ header {
   z-index: 1;
 }
 #modalContent {
+  color:white;
   padding: 40px;
   overflow: hidden;
   display: flex;
@@ -59,7 +60,7 @@ header {
   margin-left: 15%;
   margin-top: 10%;
   border-radius: 10px;
-  background-color: #f8f8f8;
+  background-color: rgb(29, 29, 29);
 }
 #albumSection {
   display: flex;
@@ -94,7 +95,7 @@ header {
   width: 200px;
   height: 300px;
   box-shadow: 2px 2px 2px rgb(128, 128, 128);
-  background-color: #ffffff;
+  background-color: #434343;
 }
 .header {
   display: flex;
@@ -113,7 +114,7 @@ p {
 }
 
 #close:hover {
-  background-color: lightcoral;
+  background-color: rgb(66, 66, 66);
 }
 #close {
   text-align: center;
@@ -121,7 +122,6 @@ p {
 
 .likeBtn {
   padding: 4px;
-  background-color: red;
 }
 
 .Btn {
@@ -139,6 +139,9 @@ p {
 }
 
 #MainPlaylist {
+  color:white;
+  justify-content: center;
+  display: flex;
   margin: 100px;
 }
 .featuredSongs {
@@ -160,6 +163,7 @@ p {
 }
 
 .cardContent {
+  color: white;
   flex: 1;
   margin-left: 10px;
   padding-top: 6px;
