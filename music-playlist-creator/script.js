@@ -278,7 +278,7 @@ async function displayFeatured() {
     let newSong = document.createElement("div");
     newSong.innerHTML = `<div class="featuredSongs">
                     <img width="80px" height="80px" src="./assets/img/top.png">
-                    <div>
+                    <div class="featSong">
                         <h3>${song}</h3>
                         <p>Twenty One Pilots</p>
                         <p>2:25</p>
