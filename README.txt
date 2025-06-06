@@ -5,8 +5,7 @@ Submitted by: Juan Manuel Sandoval Ramirez
 
 Estimated time spent: 12 hours spent in total
 
-Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
-
+Deployed Application (**required**): [Music Playlist Explorer Deployed Site](https://musicplaylist-meta2025.onrender.com/) 
 ### Application Features
 
 #### CORE FEATURES
@@ -31,9 +30,9 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
     - [x] Name
     - [x] Author
     - [x] List of songs, including each song's:
-      - [ ] Title
-      - [ ] Artist
-      - [ ] Duration
+      - [x] Title
+      - [x] Artist
+      - [x] Duration
   - [x] The modal itself should:
     - [x] Not occupy the entire screen.
     - [x] Have a shadow to show that it is a pop-up.
@@ -50,8 +49,8 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
       - [x] The like count on the playlist tile should decrease by 1.
       - [ ] There should be visual feedback (such as the heart turning a different color) to show that the playlist has been unliked by the user.
     - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
-      - [ ] a playlist with a like count of 0
-      - [ ] a playlist with a non-zero like count
+      - [x] a playlist with a like count of 0
+      - [x] a playlist with a non-zero like count
 
 - [x] **Shuffle Songs**
   - [x] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist's detail modal.
@@ -63,9 +62,9 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
     - [x] Playlist Image
     - [x] Playlist Name
     - [x] List of songs, including each song's:
-      - [ ] Title
-      - [ ] Artist
-      - [ ] Duration
+      - [x] Title
+      - [x] Artist
+      - [x] Duration
   - [x] When the page is refreshed or reloaded, a new random playlist is displayed
     - For example, navigating to the all playlists page and then back to the featured playlist page should result in a new random playlist being displayed
     - Note that because your algorithm will not be truly random, it is possible that the same playlist will feature twice in a row. 
@@ -107,7 +106,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](ADD
     - [x] Name 
     - [ ] Author
   - [ ] The search bar should include:
-    - [ ] Text input field
+    - [x] Text input field
     - [ ] Submit/Search Button
     - [ ] Clear Button
   - [ ] Playlists matching the search query in the text input are displayed in a grid view when the user:
