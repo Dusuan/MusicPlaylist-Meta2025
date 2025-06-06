@@ -4,7 +4,8 @@ const closeModal = document.getElementById("close");
 const cardExplorer = document.getElementById("playlist-cards");
 const featured = document.getElementById("MainPlaylist");
 const search = document.getElementById("search");
-
+const clearBtn = document.getElementById("clearBtn")
+const searchBtn = document.getElementById("searchBtn")
 function setModalClosed() {
   modal.style.display = "none";
 }
@@ -21,14 +22,30 @@ async function getData() {
 }
 async function displayPlaylists() {
   let Playlists = await getData();
-  search.oninput = () => {
+  // search.oninput = () => {
+  //   const normfilt = search.value.toLowerCase().replace(/\s+/g, "");
+  //   const FilteredPlaylists = Playlists.filter((playlist) => {
+  //     const play = playlist.playlist_name.toLowerCase();
+  //     return play.replace(/\s+/g, "").includes(normfilt);
+  //   });
+  //   renderPlaylist(FilteredPlaylists);
+  // };
+
+  searchBtn.addEventListener("click", () => {
     const normfilt = search.value.toLowerCase().replace(/\s+/g, "");
     const FilteredPlaylists = Playlists.filter((playlist) => {
       const play = playlist.playlist_name.toLowerCase();
-      return play.replace(/\s+/g, "").includes(normfilt);
+      const author = playlist.playlist_author.toLowerCase();
+      return play.replace(/\s+/g, "").includes(normfilt) || author.replace(/\s+/g, "").includes(normfilt) ;
     });
     renderPlaylist(FilteredPlaylists);
-  };
+  })
+
+  clearBtn.addEventListener("click", () => {
+    search.value="";
+  renderPlaylist(Playlists);
+  })
+
   renderPlaylist(Playlists);
 }
 async function renderPlaylist(Playlists) {

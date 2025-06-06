@@ -44,10 +44,10 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
   - [x] When the heart icon is clicked:
     - [x] If previously unliked:
       - [x] The like count on the playlist tile should increase by 1.
-      - [ ] There should be visual feedback (such as the heart turning a different color) to show that the playlist has been liked by the user.
+      - [x] There should be visual feedback (such as the heart turning a different color) to show that the playlist has been liked by the user.
     - [x] If previously liked:
       - [x] The like count on the playlist tile should decrease by 1.
-      - [ ] There should be visual feedback (such as the heart turning a different color) to show that the playlist has been unliked by the user.
+      - [x] There should be visual feedback (such as the heart turning a different color) to show that the playlist has been unliked by the user.
     - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS:** In addition to showcasing the above features, for ease of grading, please film yourself liking and unliking:
       - [x] a playlist with a like count of 0
       - [x] a playlist with a non-zero like count
