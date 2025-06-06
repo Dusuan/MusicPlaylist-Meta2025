@@ -52,9 +52,7 @@ async function displayPlaylists() {
 
   renderPlaylist(Playlists);
 }
-
 function filter(Playlists){
-  
     const normfilt = search.value.toLowerCase().replace(/\s+/g, "");
     const FilteredPlaylists = Playlists.filter((playlist) => {
       const play = playlist.playlist_name.toLowerCase();
@@ -64,7 +62,6 @@ function filter(Playlists){
     renderPlaylist(FilteredPlaylists);
   
 }
-
 async function renderPlaylist(Playlists) {
   const cardChildren = cardExplorer.children;
   const cardArray = [...cardChildren];
@@ -76,7 +73,7 @@ async function renderPlaylist(Playlists) {
     newCard.innerHTML = `<div id="id-${element.playlistID}" class="card">
         <img width="200px" height="200px" src=${element.imgSrc} />
         <div class="cardContent">
-          <div style="display:flex; justify-content: space-between">
+          <div class="textarea">
            <div>
             <h4>${element.playlist_name}</h4>
             <p>${element.playlist_author}</p>
@@ -139,7 +136,7 @@ function renderSongs(PlaylistData) {
   modalArray.forEach((item) => modal.removeChild(item));
 
   xbtn = document.createElement("div");
-  xbtn.innerHTML = `<div id="close" class="x" style="width: 20px; height: 20px; padding: 10px">
+  xbtn.innerHTML = `<div id="close" class="xbtn">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
           </div>`;
   modal.innerHTML = /*html*/ `<div id="modalContent">
@@ -160,7 +157,6 @@ function renderSongs(PlaylistData) {
         </div>
         <div><button class="Btn">Shuffle</button></div>
         <div id="albumSongs" class="albumSongs">
-
       </div>`;
 
   const albumSongsPart = modal.getElementsByClassName("albumSongs");
@@ -177,13 +173,7 @@ function renderSongs(PlaylistData) {
               src="${PlaylistData.imgSrc}"
             />
             <div
-              style="
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-              "
+            class="songInModal"
             >
               <div>
                 <p>${song.title}</p>
