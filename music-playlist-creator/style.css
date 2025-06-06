@@ -103,7 +103,7 @@ header {
   border-radius: 2%;
   width: 200px;
   height: 300px;
-  box-shadow: 2px 2px 2px rgb(128, 128, 128);
+  box-shadow: 10px 10px 30px rgb(84, 84, 84);
   background-color: #434343;
 }
 .header {
@@ -238,4 +238,9 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+#sorting{
+  height: 30px;
+  color: white;
+  background-color: #434343;
 }

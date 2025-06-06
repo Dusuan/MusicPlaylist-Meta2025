@@ -5,9 +5,10 @@ const closeModal = document.getElementById("close");
 const cardExplorer = document.getElementById("playlist-cards");
 const featured = document.getElementById("MainPlaylist");
 const search = document.getElementById("search");
-const clearBtn = document.getElementById("clearBtn")
-const searchBtn = document.getElementById("searchBtn")
-// Logic 
+const clearBtn = document.getElementById("clearBtn");
+const searchBtn = document.getElementById("searchBtn");
+const sort = document.getElementById("sorting");
+// Logic
 
 function setModalClosed() {
   modal.style.display = "none";
@@ -25,7 +26,7 @@ async function getData() {
 async function displayPlaylists() {
   let Playlists = await getData();
 
-   // I believe this is better, but for sake of the review i just commented it 
+  // I believe this is better, but for sake of the review i just commented it
   // search.oninput = () => {
   //   const normfilt = search.value.toLowerCase().replace(/\s+/g, "");
   //   const FilteredPlaylists = Playlists.filter((playlist) => {
@@ -35,32 +36,33 @@ async function displayPlaylists() {
   //   renderPlaylist(FilteredPlaylists);
   // };
 
-
   search.addEventListener("keypress", (event) => {
-  if(event.key === "Enter"){
-    event.preventDefault()
-    filter(Playlists)
-  }
-  })
+    if (event.key === "Enter") {
+      event.preventDefault();
+      filter(Playlists);
+    }
+  });
 
-  searchBtn.addEventListener("click", () => filter(Playlists))
+  searchBtn.addEventListener("click", () => filter(Playlists));
 
   clearBtn.addEventListener("click", () => {
-    search.value="";
-  renderPlaylist(Playlists);
-  })
+    search.value = "";
+    renderPlaylist(Playlists);
+  });
 
   renderPlaylist(Playlists);
 }
-function filter(Playlists){
-    const normfilt = search.value.toLowerCase().replace(/\s+/g, "");
-    const FilteredPlaylists = Playlists.filter((playlist) => {
-      const play = playlist.playlist_name.toLowerCase();
-      const author = playlist.playlist_author.toLowerCase();
-      return play.replace(/\s+/g, "").includes(normfilt) || author.replace(/\s+/g, "").includes(normfilt) ;
-    });
-    renderPlaylist(FilteredPlaylists);
-  
+function filter(Playlists) {
+  const normfilt = search.value.toLowerCase().replace(/\s+/g, "");
+  const FilteredPlaylists = Playlists.filter((playlist) => {
+    const play = playlist.playlist_name.toLowerCase();
+    const author = playlist.playlist_author.toLowerCase();
+    return (
+      play.replace(/\s+/g, "").includes(normfilt) ||
+      author.replace(/\s+/g, "").includes(normfilt)
+    );
+  });
+  renderPlaylist(FilteredPlaylists);
 }
 async function renderPlaylist(Playlists) {
   const cardChildren = cardExplorer.children;
@@ -87,7 +89,9 @@ async function renderPlaylist(Playlists) {
           <div
             class="cardMenu"
           >
-<svg class="likeBtn" fill="${element.isLiked ? "red" : "#ffffff" }" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>        
+<svg class="likeBtn" fill="${
+      element.isLiked ? "red" : "#ffffff"
+    }" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>        
 
         <p> ${element.likeCount} Likes</p>
           </div>
@@ -101,9 +105,7 @@ async function renderPlaylist(Playlists) {
     deleteBtn[0].addEventListener("click", () =>
       deleteCard(Playlists, element)
     );
-    likeBtn[0].addEventListener("click", () =>
-      like(Playlists, element)
-    );
+    likeBtn[0].addEventListener("click", () => like(Playlists, element));
     cardExplorer.appendChild(newCard);
   });
 }
@@ -211,7 +213,6 @@ async function RandomPlaylist() {
 }
 async function displayFeatured() {
   const randPlaylist = await RandomPlaylist();
-  console.log(randPlaylist);
   featured.innerHTML = `<div id="featuredContainer">
             <div id="playlistImage">
                 <img width="400px" height="400px" src="${randPlaylist.imgSrc}">
@@ -242,8 +243,35 @@ async function displayFeatured() {
   });
 }
 
+async function Sort() {
+  let Playlists = await getData();
+  const sortType = sort.value;
+  if (sortType === "name") {
+    let byName = Playlists.slice(0);
+    byName.sort(function (a, b) {
+      const x = a.playlist_name.toLowerCase();
+      const y = b.playlist_name.toLowerCase();
+      return x < y ? -1 : x > y ? 1 : 0;
+    });
+    renderPlaylist(byName);
+  } else if (sortType === "likes") {
+    let byLikes = Playlists.slice(0);
+    byLikes.sort(function (a, b) {
+      return b.likeCount - a.likeCount;
+    });
+    renderPlaylist(byLikes);
+  } else {
+  }
+}
+
 displayPlaylists();
 displayFeatured();
+
+// help functions
+
+function compareNames(name1, name2) {
+  return name1 - name2;
+}
 
 // Code that got cleaned up but might want to keep in hand >>> {
 //
@@ -266,7 +294,7 @@ displayFeatured();
 //       <p>${PlaylistData.playlist_author}</p>
 //       </div>
 //           </div>
-          
+
 //         </div>
 //         <div><button class="Btn">Shuffle</button></div>
 //         <div id="albumSongs" class="albumSongs">
