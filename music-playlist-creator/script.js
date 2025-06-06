@@ -2,6 +2,7 @@ const modal = document.getElementById("modal");
 const card = document.getElementById("card");
 const closeModal = document.getElementById("close");
 const cardExplorer = document.getElementById("playlist-cards");
+const featured = document.getElementById("MainPlaylist");
 // card.addEventListener("click", setModalOpen)
 // closeModal.addEventListener("click", setModalClosed);
 
@@ -85,7 +86,6 @@ function like(Playlists, PlaylistData) {
   renderPlaylist(Playlists);
 }
 function openModal(PlaylistData) {
-  
   xbtn = document.createElement("div");
   xbtn.innerHTML = `<div id="close" class="x" style="width: 20px; height: 20px; padding: 10px">
             X
@@ -111,13 +111,12 @@ function openModal(PlaylistData) {
 
       </div>`;
 
-
-  const albumSongsPart = modal.getElementsByClassName('albumSongs')
-  console.log(albumSongsPart[0])
+  const albumSongsPart = modal.getElementsByClassName("albumSongs");
+  console.log(albumSongsPart[0]);
   let songs = PlaylistData.songs;
-  console.log(songs)
-  songs.forEach((song) =>  {
-    let newSong = document.createElement('div')
+  console.log(songs);
+  songs.forEach((song) => {
+    let newSong = document.createElement("div");
     newSong.innerHTML = `
     <div id="song">
             <img
@@ -145,8 +144,8 @@ function openModal(PlaylistData) {
             </div>
           </div>`;
 
-    albumSongsPart[0].appendChild(newSong)}
-  )
+    albumSongsPart[0].appendChild(newSong);
+  });
 
   const playlistSection = modal.getElementsByClassName("x");
   const shufflBtn = modal.getElementsByClassName("shufflBtn");
@@ -157,7 +156,6 @@ function openModal(PlaylistData) {
   playlistSection[0].appendChild(xbtn);
   setModalOpen();
 }
-
 function renderSongs(PlaylistData) {
   const modalChildren = modal.children;
   const modalArray = [...modalChildren];
@@ -189,13 +187,12 @@ function renderSongs(PlaylistData) {
 
       </div>`;
 
-
-  const albumSongsPart = modal.getElementsByClassName('albumSongs')
-  console.log(albumSongsPart[0])
+  const albumSongsPart = modal.getElementsByClassName("albumSongs");
+  console.log(albumSongsPart[0]);
   let songs = PlaylistData.songs;
-  console.log(songs)
-  songs.forEach((song) =>  {
-    let newSong = document.createElement('div')
+  console.log(songs);
+  songs.forEach((song) => {
+    let newSong = document.createElement("div");
     newSong.innerHTML = `
     <div id="song">
             <img
@@ -223,9 +220,8 @@ function renderSongs(PlaylistData) {
             </div>
           </div>`;
 
-    albumSongsPart[0].appendChild(newSong)}
-  )
-  
+    albumSongsPart[0].appendChild(newSong);
+  });
 
   const playlistSection = modal.getElementsByClassName("x");
   const shufflBtn = modal.getElementsByClassName("shufflBtn");
@@ -244,30 +240,45 @@ function shuffle(PlaylistData, songs) {
   renderSongs(PlaylistData);
 }
 
-displayPlaylists();
-
-/*≈<div id="song">
-            <img
-              style="border-radius: 4px"
-              width="50px"
-              src="${PlaylistData.imgSrc}"
-            />
-            <div
-              style="
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-              "
-            >
-              <div>
-                <p>Cut my Lip</p>
-                <p>Twenty One pilots</p>
-                <p>Trench</p>
-              </div>
-              <div>
-                <p>3:34</p>
-              </div>
+async function RandomPlaylist() {
+  let Playlists = await getData();
+  let rand = Playlists[Math.floor(Math.random() * Playlists.length)];
+  return rand;
+}
+async function displayFeatured() {
+  const randPlaylist = await RandomPlaylist();
+  console.log(randPlaylist);
+  featured.innerHTML = `<div id="featuredContainer">
+            <div id="playlistImage">
+                <img width="400px" height="400px" src="${randPlaylist.imgSrc}">
+                <div>
+                    <h1>${randPlaylist.playlist_name}</h1>
+                </div>
             </div>
-          </div>*/
+            <div id="playlistSongs" class="featuredPlaylist">
+               
+              
+            </div>
+        </div>`;
+
+  let featuredPlaylist = featured.getElementsByClassName("featuredPlaylist");
+  let songs = randPlaylist.songs
+  console.log(featuredPlaylist)
+  songs.forEach((song) => {
+    let newSong = document.createElement("div");
+    newSong.innerHTML = 
+    `<div class="featuredSongs">
+                    <img width="80px" height="80px" src="./assets/img/top.png">
+                    <div>
+                        <h3>${song}</h3>
+                        <p>Twenty One Pilots</p>
+                        <p>2:25</p>
+                    </div>
+       </div>`;
+      featuredPlaylist[0].appendChild(newSong)
+
+  });
+}
+
+displayFeatured();
+displayPlaylists();

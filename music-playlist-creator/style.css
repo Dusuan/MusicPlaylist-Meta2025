@@ -6,6 +6,17 @@ body {
   display: flex;
   flex-direction: column;
 }
+h1 {
+  text-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+h3{
+  padding: 0px;
+  margin: 0px;
+  text-align: start;
+}
 
 .shufflBtn {
   width: 100px;
@@ -85,7 +96,10 @@ header {
   box-shadow: 2px 2px 2px rgb(128, 128, 128);
   background-color: #ffffff;
 }
-
+.header {
+  display: flex;
+  justify-content: space-between;
+}
 img {
   border-top-left-radius: 2%;
   border-top-right-radius: 2%;
@@ -108,4 +122,34 @@ p {
 .likeBtn {
   padding: 4px;
   background-color: red;
+}
+
+.headerBtn {
+  padding: 10px;
+  background-color: black;
+  border-radius: 8px;
+  margin: 10px;
+  color: white;
+}
+
+#featuredContainer {
+  height: 500px;
+  display: flex;
+  gap: 50px;
+}
+
+#MainPlaylist {
+  margin: 100px;
+}
+.featuredSongs {
+  gap: 10px;
+  display: flex;
+}
+#playlistSongs {
+  overflow: scroll;
+  scrollbar-width: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
