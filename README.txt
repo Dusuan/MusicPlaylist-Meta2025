@@ -3,7 +3,7 @@
 
 Submitted by: Juan Manuel Sandoval Ramirez
 
-Estimated time spent: 12 hours spent in total
+Estimated time spent: 20 hours spent in total
 
 Deployed Application (**required**): [Music Playlist Explorer Deployed Site](https://musicplaylist-meta2025.onrender.com/) 
 ### Application Features
@@ -123,10 +123,10 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 
 - [ ] **Sorting Options**
   - [ ] Implement a drop-down or button options that allow users to sort the playlist by:
-    - [ ] Name (A-Z alphabetically)
-    - [ ] Number of likes (descending order)
+    - [x] Name (A-Z alphabetically)
+    - [x] Number of likes (descending order)
     - [ ] Date added (most recent to oldest, chronologically)
-  - [ ] Selecting a sort option should result in a reordering based on the selected sort while maintaining a grid view.
+  - [x] Selecting a sort option should result in a reordering based on the selected sort while maintaining a grid view.
 
 ### Walkthrough Video
 
@@ -140,18 +140,31 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 
 Add your response here
 
+---> Absolutely, i actually refreshed thigs that i wouldnt have done without the labs, the only thing that got me stuck is some of the javascript usefull functions that would've make the 
+developing faster
+
+
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
 Add your response here
+
+---> I would've liked to add and edit the playlists json, but because we didnt go trough posting with fetch, i felt that managing all those states without a file to store it would've taken 
+too much time and felt like the sorting, and searching were more fun to try
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
 Add your response here
 
+---> 
+
 ### Open-source libraries used
 
 - Add any links to open-source libraries used in your project.
 
+---> no libraries were used in this project
+
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+---> Shout out to Jesus!, he helped me get unstuck in some features, also to Diego Lopez, he gave me some good ideas to implement some functionality

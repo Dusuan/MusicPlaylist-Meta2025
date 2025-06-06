@@ -13,8 +13,9 @@
       {"title": "Tear in My Heart", "artist": "Twenty One Pilots", "duration": "3:08"}
     ],
     "imgSrc": "./assets/img/top.png",
-    "likeCount": 1000000000,
-    "isLiked": false
+    "likeCount": 98,
+    "isLiked": false,
+    "timeCreated": 2005
   },
   {
     "playlistID": 2,
@@ -31,7 +32,8 @@
     ],
     "imgSrc": "./assets/img/blurry.png",
     "likeCount": 0,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 2001
   },
   {
     "playlistID": 3,
@@ -48,7 +50,8 @@
     ],
     "imgSrc": "./assets/img/images.jpeg",
     "likeCount": 5,
-    "isLiked": true
+    "isLiked": true,
+    "timeCreated": 2000
   },
   {
     "playlistID": 4,
@@ -65,7 +68,8 @@
     ],
     "imgSrc": "./assets/img/linkinpark.png",
     "likeCount": 10,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 1990
   },
   {
     "playlistID": 5,
@@ -82,7 +86,8 @@
     ],
     "imgSrc": "./assets/img/nirvana.jpg",
     "likeCount": 7,
-    "isLiked": true
+    "isLiked": true,
+    "timeCreated": 1999
   },
   {
     "playlistID": 6,
@@ -99,7 +104,8 @@
     ],
     "imgSrc": "./assets/img/quens.png",
     "likeCount": 3,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 2001
   },
   {
     "playlistID": 7,
@@ -116,7 +122,8 @@
     ],
     "imgSrc": "./assets/img/pillows.jpg",
     "likeCount": 8,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 2002
   },
   {
     "playlistID": 8,
@@ -133,7 +140,8 @@
     ],
     "imgSrc": "./assets/img/gorillaz.jpg",
     "likeCount": 12,
-    "isLiked": true
+    "isLiked": true,
+    "timeCreated": 1989
   },
   {
     "playlistID": 9,
@@ -150,7 +158,8 @@
     ],
     "imgSrc": "./assets/img/gorillaz2.jpg",
     "likeCount": 9,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 2020
   },
   {
     "playlistID": 10,
@@ -167,7 +176,8 @@
     ],
     "imgSrc": "./assets/img/foo.avif",
     "likeCount": 4,
-    "isLiked": true
+    "isLiked": true,
+    "timeCreated": 2025
   },
   {
     "playlistID": 11,
@@ -184,7 +194,8 @@
     ],
     "imgSrc": "./assets/img/foof.jpg",
     "likeCount": 6,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 2024
   },
   {
     "playlistID": 12,
@@ -201,7 +212,8 @@
     ],
     "imgSrc": "./assets/img/caifanes.jpg",
     "likeCount": 11,
-    "isLiked": true
+    "isLiked": true,
+    "timeCreated": 2023
   },
   {
     "playlistID": 13,
@@ -218,7 +230,8 @@
     ],
     "imgSrc": "./assets/img/bjork.png",
     "likeCount": 2,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 2019
   },
   {
     "playlistID": 14,
@@ -235,7 +248,8 @@
     ],
     "imgSrc": "./assets/img/imagine.jpg",
     "likeCount": 14,
-    "isLiked": true
+    "isLiked": true,
+    "timeCreated": 2015
   },
   {
     "playlistID": 15,
@@ -252,7 +266,8 @@
     ],
     "imgSrc": "./assets/img/pillows.jpg",
     "likeCount": 5,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 2012
   },
   {
     "playlistID": 16,
@@ -269,7 +284,8 @@
     ],
     "imgSrc": "./assets/img/minecraft.jpeg",
     "likeCount": 8,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 2022
   },
   {
     "playlistID": 17,
@@ -286,7 +302,8 @@
     ],
     "imgSrc": "./assets/img/selftitled.png",
     "likeCount": 6,
-    "isLiked": true
+    "isLiked": true,
+    "timeCreated": 2007
   },
   {
     "playlistID": 18,
@@ -303,7 +320,8 @@
     ],
     "imgSrc": "./assets/img/vessel.png",
     "likeCount": 3,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 2008
   },
   {
     "playlistID": 19,
@@ -320,7 +338,8 @@
     ],
     "imgSrc": "./assets/img/soda.jpeg",
     "likeCount": 15,
-    "isLiked": true
+    "isLiked": true,
+    "timeCreated": 2009
   },
   {
     "playlistID": 20,
@@ -337,6 +356,7 @@
     ],
     "imgSrc": "./assets/img/heroes.jpg",
     "likeCount": 4,
-    "isLiked": false
+    "isLiked": false,
+    "timeCreated": 2000
   }
 ]
