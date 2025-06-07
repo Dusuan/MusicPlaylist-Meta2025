@@ -130,7 +130,8 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
 ### Walkthrough Video
 
 
-[!(https://img.youtube.com/vi/mm6f6rsn5Bs/0.jpg)] https://www.youtube.com/watch?v=mm6f6rsn5Bs
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=mm6f6rsn5Bs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 ### Reflection
