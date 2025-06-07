@@ -1,4 +1,3 @@
-
 ## Unit Assignment: Music Playlist Explorer
 
 Submitted by: Juan Manuel Sandoval Ramirez
@@ -101,7 +100,7 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
   - [x]  Add a delete button to each playlist tile within the grid view.
   - [x] When clicked, the playlist is removed from the playlist grid view.
 
-- [ ] **Search Functionality**
+- [x] **Search Functionality**
   - [x] Implement a search bar that allows users to filter playlists by:
     - [x] Name 
     - [x] Author
@@ -121,11 +120,11 @@ Deployed Application (**required**): [Music Playlist Explorer Deployed Site](htt
       - [ ] If users can delete a playlist, deleted playlists should no longer be included in search results.
       - **Note:** You will not be graded on the implementation of this optional subfeature to keep your grade of this stretch feature independent of your implementation of other stretch features. However, we highly suggest including this in your implementation to model realistic behavior of real applications. 
 
-- [ ] **Sorting Options**
-  - [ ] Implement a drop-down or button options that allow users to sort the playlist by:
+- [x] **Sorting Options**
+  - [x] Implement a drop-down or button options that allow users to sort the playlist by:
     - [x] Name (A-Z alphabetically)
     - [x] Number of likes (descending order)
-    - [ ] Date added (most recent to oldest, chronologically)
+    - [x] Date added (most recent to oldest, chronologically)
   - [x] Selecting a sort option should result in a reordering based on the selected sort while maintaining a grid view.
 
 ### Walkthrough Video
@@ -155,7 +154,8 @@ too much time and felt like the sorting, and searching were more fun to try
 
 Add your response here
 
----> 
+---> I mostly think i would have taken more time in the styling, overall is very functional and it looks decent, but some buttons or maybe things that the user interacts with isn't so great
+my peers mainly pointed out that it would be very good if i added some more animations that make the interaction more intuitive for the user, and thats something i will like to keep in mind for future projects
 
 ### Open-source libraries used
 
